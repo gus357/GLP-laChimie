@@ -32,7 +32,7 @@ public class Propriete extends JFrame{
 	private static JTextArea jtfEtat;
 	private JFileChooser jfc;
 	
-	public Propriete() {
+	public Propriete() {//test
 		super(Atome);
 		this.getContentPane().setLayout(new GridBagLayout());
 		
