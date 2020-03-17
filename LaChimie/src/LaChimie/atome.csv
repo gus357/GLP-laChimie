@@ -1,0 +1,118 @@
+1,Hydrogène,hydrogene,H,1,1,"1,0079"
+2,Hélium,helium,He,18,1,"4,0026"
+3,Lithium,lithium,Li,1,2,"6,941"
+4,Béryllium,beryllium,Be,2 (IIA),2,"9,0122"
+5,Bore,bore,B,13 (IIIA),2,"10,811"
+6,Carbone,carbone,C,14,2,"12,0107"
+7,Azote,azote,N,15 (VA),2,"14,0067"
+8,Oxygène,oxygene,O,16,2,"15,9994"
+9,Fluor,fluor,F,17 (VII),2,"18,9984"
+10,Néon,neon,Ne,18 (VIIIA),2,"20,1797"
+11,Sodium,sodium,Na,1,3,"22,9897"
+12,Magnésium,magnesium,Mg,2 (IIA),3,"24,305"
+13,Aluminium,aluminium,Al,13 (IIIA),3,"26,9815"
+14,Silicium,silicium,Si,14,3,"28,0855"
+15,Phosphore,phosphore,P,15 (VA),3,"30,9738"
+16,Soufre,soufre,S,16 (VIA),3,"32,065"
+17,Chlore,chlore,Cl,17 (VII),3,"35,453"
+18,Argon,argon,Ar,18 (VIIIA),3,"39,0983"
+19,Potassium,potassium,K,1 (IA),4,"39,948"
+20,Calcium,calcium,Ca,2 (IIA),4,"40,078"
+21,Scandium,scandium,Sc,3,4,"44,9559"
+22,Titane,titane,Ti,4,4,"47,867"
+23,Vanadium,vanadium,V,5,4,"50,9415"
+24,Chrome,chrome,Cr,6,4,"51,9961"
+25,Manganèse,manganese,Mn,7,4,"54,938"
+26,Fer,fer,Fe,8,4,"55,845"
+27,Cobalt,cobalt,Co,9,4,"58,6934"
+28,Nickel,nickel,Ni,10,4,"58,9332"
+29,Cuivre,cuivre,Cu,11,4,"63,546"
+30,Zinc,zinc,Zn,12,4,"65,39"
+31,Gallium,gallium,Ga,13 (IIIA),4,"69,723"
+32,Germanium,germanium,Ge,14,4,"72,64"
+33,Arsenic,arsenic,As,15,4,"74,9216"
+34,Sélénium,selenium,Se,16 (VIA),4,"78,96"
+35,Brome,brome,Br,17 (VII),4,"79,904"
+36,Krypton,krypton,Kr,18 (VIIIA),4,"83,8"
+37,Rubidium,rubidium,Rb,1 (IA),5,"85,4678"
+38,Strontium,strontium,Sr,2 (IIA),5,"87,62"
+39,Yttrium,yttrium,Y,3,5,"88,9059"
+40,Zirconium,zirconium,Zr,4,5,"91,224"
+41,Niobium,niobium,Nb,5,5,"92,9064"
+42,Molybdéne,molybdene,Mo,6,5,"95,94"
+43,Technétium,technetium,Tc,7,5,98
+44,Ruthénium,ruthenium,Ru,8,5,"101,07"
+45,Rhodium,rhodium,Rh,9,5,"102,9055"
+46,Palladium,palladium,Pd,10,5,"106,42"
+47,Argent,argent,Ag,11,5,"107,8682"
+48,Cadmium,cadmium,Cd,12,5,"112,411"
+49,Indium,indium,In,13 (IIIA),5,"114,818"
+50,étain,etain,Sn,14,5,"118,71"
+51,Antimoine,antimoine,Sb,15,5,"121,76"
+52,Tellure,tellure,Te,16,5,"126,9045"
+53,Iode,iode,I,17 (VII),5,"127,6"
+54,Xénon,xenon,Xe,18 (VIIIA),5,"131,293"
+55,Césium,cesium,Cs,1 (IA),6,"132,9055"
+56,Baryum,baryum,Ba,2 (IIA),6,"137,327"
+57,Lanthane,lanthane,La,3,6,"138,9055"
+58,Cérium,cerium,Ce,L/A,6,"140,116"
+59,Praséodyme,praseodyme,Pr,L/A,6,"140,9077"
+60,Néodyme,neodyme,Nd,L/A,6,"144,24"
+61,Prométhium,promethium,Pm,L/A,6,145
+62,Samarium,samarium,Sm,L/A,6,"150,36"
+63,Europium,europium,Eu,L/A,6,"151,964"
+64,Gadolinium,gadolinium,Gd,L/A,6,"157,25"
+65,Terbium,terbium,Tb,L/A,6,"158,9253"
+66,Dysprosium,dysprosium,Dy,L/A,6,"162,5"
+67,Holmium,holmium,Ho,L/A,6,"164,9303"
+68,Erbium,erbium,Er,L/A,6,"167,259"
+69,Thulium,thulium,Tm,L/A,6,"168,9342"
+70,Ytterbium,ytterbium,Yb,L/A,6,"173,04"
+71,Lutécium,lutecium,Lu,L/A,6,"174,967"
+72,Hafnium,hafnium,Hf,4 (IVB),6,"178,49"
+73,Tantale,tantale,Ta,5 (VB),6,"180,9479"
+74,Tungstène,tungstene,W,6,6,"183,84"
+75,Rhénium,rhenium,Re,7 (VIIB),6,"186,207"
+76,Osmium,osmium,Os,8 (VIIIB),6,"190,23"
+77,Iridium,iridium,Ir,9,6,"192,217"
+78,Platine,platine,Pt,10,6,"195,078"
+79,Or,or,Au,11,6,"196,9665"
+80,Mercure,mercure,Hg,12,6,"200,59"
+81,Thallium,thallium,Tl,13 (IIIA),6,"204,3833"
+82,Plomb,plomb,Pb,14,6,"207,2"
+83,Bismuth,bismuth,Bi,15,6,"208,9804"
+84,Polonium,polonium,Po,,16 (VIA),209
+85,Astate,astate,At,17 (VIIA),6,210
+86,Radon,radon,Rn,18 (VIIIA),6,222
+87,Francium,francium,Fr,1 (IA),7,223
+88,Radium,radium,Ra,2 (IIA),7,226
+89,Actinium,actinium,Ac,3,7,227
+90,Thorium,thorium,Th,L/A,7,"231,0359"
+91,Protactinium,protactinium,Pa,L/A,7,"232,0381"
+92,Uranium,uranium,U,L/A,7,237
+93,Neptunium,neptunium,Np,L/A,7,"238,0289"
+94,Plutonium,plutonium,Pu,L/A,7,243
+95,Américium,americium,Am,L/A,7,244
+96,Curium,curium,Cm,L/A,7,247
+97,Berkélium,berkelium,Bk,L/A,7,247
+98,Californium,californium,Cf,L/A,7,251
+99,Einsteinium,einsteinium,Es,L/A,7,252
+100,Fermium,fermium,Fm,L/A,7,257
+101,Mendélévium,mendelevium,Md,L/A,7,258
+102,Nobélium,nobelium,No,L/A,7,259
+103,Lawrencium,lawrencium,Lr,L/A,7,261
+104,Rutherfordium,rutherfordium,Rf,4,d,262
+105,Dubnium,dubnium,Db,5,7,262
+106,Seaborgium,seaborgium,Sg,6,7,264
+107,Bohrium,bohrium,Bh,7,7,266
+108,Hassium,hassium,Hs,8,7,268
+109,Meitnérium,meitnerium,Mt,9,7,277
+110,Darmstadtium,darmstadtium,Ds,10,7,
+111,Roentgenium,roentgenium,Rg,11,7,
+112,Copernicium,copernicium,Cn,12,7,
+113,Ununtrium,ununtrium,Uut,13,7,
+114,Flérovium,flerovium,Fl,14,7,
+115,Ununpentium,ununpentium,Uup,15,7,
+116,Livermorium,livermorium,Lv,16,7,
+117,Ununseptium,ununseptium,Uus,17,7,
+118,Ununoctium,ununoctium,Uuo,18,7,
