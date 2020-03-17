@@ -14,7 +14,34 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
-import Chimie.ActionHydrogène;
+import ActionListener.ActionActinides;
+import ActionListener.ActionBaryum;
+import ActionListener.ActionBérillium;
+import ActionListener.ActionCalcium;
+import ActionListener.ActionChrome;
+import ActionListener.ActionCésium;
+import ActionListener.ActionDubnium;
+import ActionListener.ActionFrancium;
+import ActionListener.ActionHafnium;
+import ActionListener.ActionHydrogène;
+import ActionListener.ActionLanthanides;
+import ActionListener.ActionLithium;
+import ActionListener.ActionMagnésium;
+import ActionListener.ActionMolibdène;
+import ActionListener.ActionNobium;
+import ActionListener.ActionPotassium;
+import ActionListener.ActionRadium;
+import ActionListener.ActionRubidium;
+import ActionListener.ActionRutherfordium;
+import ActionListener.ActionScandium;
+import ActionListener.ActionSodium;
+import ActionListener.ActionStrontium;
+import ActionListener.ActionTantale;
+import ActionListener.ActionTitane;
+import ActionListener.ActionTungstène;
+import ActionListener.ActionVanadium;
+import ActionListener.ActionYttrium;
+import ActionListener.ActionZirconcium;
 
 import javax.print.DocFlavor.URL;
 import javax.swing.Icon;
@@ -64,30 +91,35 @@ public class U extends JFrame{
     cell3.setPreferredSize(new Dimension(150, 75));
     JButton but3 = new JButton ("Na");
     but3.setPreferredSize(new Dimension (100,35));
+    but3.addActionListener(new ActionSodium());
     cell3.add(but3);
     
     JPanel cell4 = new JPanel();
     cell4.setPreferredSize(new Dimension(150, 75));
     JButton but4 = new JButton ("K");
     but4.setPreferredSize(new Dimension (100,35));
+    but4.addActionListener(new ActionPotassium());
     cell4.add(but4);
     
     JPanel cell5 = new JPanel();
     cell5.setPreferredSize(new Dimension(150, 75));
     JButton but5 = new JButton ("Rb");
     but5.setPreferredSize(new Dimension (100,35));
+    but5.addActionListener(new ActionRubidium());
     cell5.add(but5);
     
     JPanel cell6 = new JPanel();
     cell6.setPreferredSize(new Dimension(150, 75));
     JButton but6 = new JButton ("Cs");
     but6.setPreferredSize(new Dimension (100,35));
+    but6.addActionListener(new ActionCésium());
     cell6.add(but6);
     
     JPanel cell7 = new JPanel();
     cell7.setPreferredSize(new Dimension(150, 75));
     JButton but7 = new JButton ("Fr");
     but7.setPreferredSize(new Dimension (100,35));
+    but7.addActionListener(new ActionFrancium());
     cell7.add(but7);
     
     // deuxiÃ¨me colonne
@@ -96,36 +128,42 @@ public class U extends JFrame{
     cell8.setPreferredSize(new Dimension(150, 75));
     JButton but8 = new JButton ("Be");
     but8.setPreferredSize(new Dimension (100,35));
+    but8.addActionListener(new ActionBérillium());
     cell8.add(but8);
     
     JPanel cell9 = new JPanel();
     cell9.setPreferredSize(new Dimension(150, 75));
     JButton but9 = new JButton ("Mg");
     but9.setPreferredSize(new Dimension (100,35));
+    but9.addActionListener(new ActionMagnésium());
     cell9.add(but9);
     
     JPanel cell10 = new JPanel();
     cell10.setPreferredSize(new Dimension(150, 75));
     JButton but10 = new JButton ("Ca");
     but10.setPreferredSize(new Dimension (100,35));
+    but10.addActionListener(new ActionCalcium());
     cell10.add(but10);
     
     JPanel cell11 = new JPanel();
     cell11.setPreferredSize(new Dimension(150, 75));
     JButton but11 = new JButton ("Sr");
     but11.setPreferredSize(new Dimension (100,35));
+    but11.addActionListener(new ActionStrontium());
     cell11.add(but11);
     
     JPanel cell12 = new JPanel();
     cell12.setPreferredSize(new Dimension(150, 75));
     JButton but12 = new JButton ("Ba");
     but12.setPreferredSize(new Dimension (100,35));
+    but12.addActionListener(new ActionBaryum());
     cell12.add(but12);
     
     JPanel cell13 = new JPanel();
     cell13.setPreferredSize(new Dimension(150, 75));
     JButton but13 = new JButton ("Ra");
     but13.setPreferredSize(new Dimension (100,35));
+    but13.addActionListener(new ActionRadium());
     cell13.add(but13);
     
     // troisiÃ¨me colonne
@@ -134,12 +172,14 @@ public class U extends JFrame{
     cell14.setPreferredSize(new Dimension(150, 75));
     JButton but14 = new JButton ("Sc");
     but14.setPreferredSize(new Dimension (100,35));
+    but14.addActionListener(new ActionScandium());
     cell14.add(but14);
     
     JPanel cell15 = new JPanel();
     cell15.setPreferredSize(new Dimension(150, 75));
     JButton but15 = new JButton ("Y");
     but15.setPreferredSize(new Dimension (100,35));
+    but15.addActionListener(new ActionYttrium());
     cell15.add(but15);
     
     JPanel cell16 = new JPanel();
@@ -153,6 +193,7 @@ public class U extends JFrame{
     cell17.setPreferredSize(new Dimension(150, 75));
     JButton but17 = new JButton ("Actinides");
     but17.setPreferredSize(new Dimension (100,35));
+    but17.addActionListener(new ActionActinides());
     cell17.add(but17);
     
     //quatriÃ¨me colonne
@@ -161,24 +202,28 @@ public class U extends JFrame{
     cell18.setPreferredSize(new Dimension(150, 75));
     JButton but18 = new JButton ("Ti");
     but18.setPreferredSize(new Dimension (100,35));
+    but18.addActionListener(new ActionTitane());
     cell18.add(but18);
     
     JPanel cell19 = new JPanel();
     cell19.setPreferredSize(new Dimension(150, 75));
     JButton but19 = new JButton ("Zr");
     but19.setPreferredSize(new Dimension (100,35));
+    but18.addActionListener(new ActionZirconcium());
     cell19.add(but19);
     
     JPanel cell20 = new JPanel();
     cell20.setPreferredSize(new Dimension(150, 75));
     JButton but20 = new JButton ("Hf");
     but20.setPreferredSize(new Dimension (100,35));
+    but20.addActionListener(new ActionHafnium());
     cell20.add(but20);
     
     JPanel cell21 = new JPanel();
     cell21.setPreferredSize(new Dimension(150, 75));
     JButton but21 = new JButton ("Rf");
     but21.setPreferredSize(new Dimension (100,35));
+    but21.addActionListener(new ActionRutherfordium());
     cell21.add(but21);
     
     // cinquiÃ¨me colonne
@@ -187,24 +232,28 @@ public class U extends JFrame{
     cell22.setPreferredSize(new Dimension(150, 75));
     JButton but22 = new JButton ("V");
     but22.setPreferredSize(new Dimension (100,35));
+    but22.addActionListener(new ActionVanadium());
     cell22.add(but22);
     
     JPanel cell23 = new JPanel();
     cell23.setPreferredSize(new Dimension(150, 75));
     JButton but23 = new JButton ("Nb");
     but23.setPreferredSize(new Dimension (100,35));
+    but23.addActionListener(new ActionNobium());
     cell23.add(but23);
     
     JPanel cell24 = new JPanel();
     cell24.setPreferredSize(new Dimension(150, 75));
     JButton but24 = new JButton ("Ta");
     but24.setPreferredSize(new Dimension (100,35));
+    but24.addActionListener(new ActionTantale());
     cell24.add(but24);
     
     JPanel cell25 = new JPanel();
     cell25.setPreferredSize(new Dimension(150, 75));
     JButton but25 = new JButton ("Db");
     but25.setPreferredSize(new Dimension (100,35));
+    but25.addActionListener(new ActionDubnium());
     cell25.add(but25);
     
     // sixiÃ¨me colonne
@@ -213,18 +262,21 @@ public class U extends JFrame{
     cell26.setPreferredSize(new Dimension(150, 75));
     JButton but26 = new JButton ("Cr");
     but26.setPreferredSize(new Dimension (100,35));
+    but26.addActionListener(new ActionChrome());
     cell26.add(but26);
     
     JPanel cell27 = new JPanel();
     cell27.setPreferredSize(new Dimension(150, 75));
     JButton but27 = new JButton ("Mo");
     but27.setPreferredSize(new Dimension (100,35));
+    but27.addActionListener(new ActionMolibdène());
     cell27.add(but27);
     
     JPanel cell28 = new JPanel();
     cell28.setPreferredSize(new Dimension(150, 75));
     JButton but28 = new JButton ("W");
     but28.setPreferredSize(new Dimension (100,35));
+    but28.addActionListener(new ActionTungstène());
     cell28.add(but28);
     
     JPanel cell29 = new JPanel();

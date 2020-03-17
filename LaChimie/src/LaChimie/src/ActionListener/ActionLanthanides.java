@@ -1,4 +1,4 @@
-package Chimie;
+package ActionListener;
 
 import java.awt.Container;
 import java.awt.event.ActionEvent;
@@ -12,7 +12,7 @@ public class ActionLanthanides extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		JButton but1 = new JButton("Lanthane");
+		JButton but1 = new JButton("Essai");
 	}
 
 }
