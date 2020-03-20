@@ -2,14 +2,17 @@ package Chimie;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -49,27 +52,33 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 public class U extends JFrame{
-	private static JTextArea jtfEtat;
-
-  /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+	//private static final long serialVersionUID = 1L;
 
 	public U(){
 		
-    this.setTitle("oio");
+    this.setTitle("Table de Mendelieve");
     this.setSize(1150, 400);
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     this.setLocationRelativeTo(null);
+	this.getContentPane().setLayout(new FlowLayout());
 
-    jtfEtat=new JTextArea();
-	jtfEtat.setText("Init.\n");
-    jtfEtat.setMargin(new Insets(5,5,5,5));
-	jtfEtat.setEditable(false); 
-	JScrollPane l2 = new JScrollPane(jtfEtat);
-	l2.setAutoscrolls(true);
-    
+	/***
+	JPanel cell0 = new JPanel();
+	cell0.setPreferredSize(new Dimension(150,75));
+	cell0.setBackground(Color.red);
+	JLabel label = new JLabel();
+	label.setPreferredSize(new Dimension(100,35));
+	label.setBackground(Color.RED);
+	cell0.add(label);
+	***/
+	
+	JPanel cell0 = new JPanel();
+	cell0.setBackground(Color.yellow);
+	cell0.setPreferredSize(new Dimension(150,75));
+	JTextArea jta = new JTextArea();
+	jta.setBackground(Color.yellow);
+	cell0.add(jta);
+
     // premiÃ¨re colonne
     
     JPanel cell1 = new JPanel();
@@ -79,7 +88,7 @@ public class U extends JFrame{
 	but1.addActionListener(new ActionHydrogène());
 	but1.setToolTipText("Hydrogène");
     cell1.add(but1);
-   
+    
     JPanel cell2 = new JPanel();
     cell2.setPreferredSize(new Dimension(150, 75));
     JButton but2 = new JButton ("Li");
@@ -867,8 +876,22 @@ public class U extends JFrame{
     content.setLayout(new GridBagLayout());
     //L'objet servant Ã  positionner les composants
     GridBagConstraints gbc = new GridBagConstraints();
-		
+	
+    /*********
+    for(gbc.gridheight=0;gbc.gridheight<5;gbc.gridheight++){
+    	for(gbc.gridwidth=0;gbc.gridwidth<3;gbc.gridwidth++) {
+    		content.add(cell0,gbc);
+    	}
+    }
+    **********/
     
+    gbc.gridx=2;
+    gbc.gridy=0;
+    gbc.ipadx=2;
+    gbc.ipady=2;
+    content.add(cell0,gbc);
+
+	
     //premiÃ¨re colonne
     
     gbc.gridx = 0;
@@ -1753,9 +1776,7 @@ public class U extends JFrame{
    //------------------------------------------------- 
     ****/
     
-
-    this.setContentPane(content);
-    
+    this.setContentPane(content);    
     this.setVisible(true);		
   }
 }
