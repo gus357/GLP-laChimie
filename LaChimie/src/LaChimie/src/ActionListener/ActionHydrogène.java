@@ -9,18 +9,22 @@ import java.io.FileReader;
 import java.io.IOException;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
-import Chimie.Atome;
-import Chimie.ListAtome;
 import Chimie.U;
+import Data.ReadCsv;
 
 public class ActionHydrogène extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-			String hydrogène = null;
-			ListAtome List = new ListAtome();
-			Atome nom = List.recherchenom(hydrogène);
+		JLabel h = new JLabel();
+		ReadCsv info = new ReadCsv();
+		h.setText("Hydrogène");
+		this.add(h);
+		this.pack();
+		this.setVisible(true);
 	}
 }
