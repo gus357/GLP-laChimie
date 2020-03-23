@@ -53,7 +53,6 @@ import javax.swing.JButton;
 
 public class U extends JFrame{
 	//private static final long serialVersionUID = 1L;
-
 	public U(){
 		
     this.setTitle("Table de Mendelieve");
@@ -61,23 +60,6 @@ public class U extends JFrame{
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     this.setLocationRelativeTo(null);
 	this.getContentPane().setLayout(new FlowLayout());
-
-	/***
-	JPanel cell0 = new JPanel();
-	cell0.setPreferredSize(new Dimension(150,75));
-	cell0.setBackground(Color.red);
-	JLabel label = new JLabel();
-	label.setPreferredSize(new Dimension(100,35));
-	label.setBackground(Color.RED);
-	cell0.add(label);
-	***/
-	
-	JPanel cell0 = new JPanel();
-	cell0.setBackground(Color.yellow);
-	cell0.setPreferredSize(new Dimension(150,75));
-	JTextArea jta = new JTextArea();
-	jta.setBackground(Color.yellow);
-	cell0.add(jta);
 
     // premiÃ¨re colonne
     
@@ -87,7 +69,7 @@ public class U extends JFrame{
     but1.setPreferredSize(new Dimension (100,35));
 	but1.addActionListener(new ActionHydrogène());
 	but1.setToolTipText("Hydrogène");
-    cell1.add(but1);
+	cell1.add(but1);
     
     JPanel cell2 = new JPanel();
     cell2.setPreferredSize(new Dimension(150, 75));
@@ -877,20 +859,6 @@ public class U extends JFrame{
     //L'objet servant Ã  positionner les composants
     GridBagConstraints gbc = new GridBagConstraints();
 	
-    /*********
-    for(gbc.gridheight=0;gbc.gridheight<5;gbc.gridheight++){
-    	for(gbc.gridwidth=0;gbc.gridwidth<3;gbc.gridwidth++) {
-    		content.add(cell0,gbc);
-    	}
-    }
-    **********/
-    
-    gbc.gridx=2;
-    gbc.gridy=0;
-    gbc.ipadx=2;
-    gbc.ipady=2;
-    content.add(cell0,gbc);
-
 	
     //premiÃ¨re colonne
     

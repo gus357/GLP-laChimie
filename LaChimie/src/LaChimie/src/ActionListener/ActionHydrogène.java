@@ -19,10 +19,8 @@ public class ActionHydrogène extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		String Hydrogène = null;
-		ListAtome List = new ListAtome();
-		Atome nom = List.recherchenom(Hydrogène);
-		
-		U u = new U();
+			String hydrogène = null;
+			ListAtome List = new ListAtome();
+			Atome nom = List.recherchenom(hydrogène);
 	}
 }
