@@ -10,7 +10,8 @@ import Chimie.Atome;
 import Chimie.ListAtome;
 
 public class ReadCsv extends ListAtome{
-	
+	public final static String SEPARATOR = ";";
+
 	public void ReadCSVAtome(String separator, String fileName) {
 		String line, fields[];
 		try {
@@ -18,8 +19,7 @@ public class ReadCsv extends ListAtome{
 			br.readLine();			
 			while((line = br.readLine()) != null) {
 				fields = line.split(separator);
-				Atome atome = new Atome(fields[0], fields[1], fields[2], fields[3]);
-				double masseAtomique =Double.parseDouble(fields[2]);
+				Atome atome = new Atome(fields[0], fields[1], fields[2], fields[3], fields[4]);
 				add(atome);
 			}
 		
@@ -33,4 +33,9 @@ public class ReadCsv extends ListAtome{
 		System.err.println(e.getMessage());
 	}
 	}
+	
 }
+	
+
+
+

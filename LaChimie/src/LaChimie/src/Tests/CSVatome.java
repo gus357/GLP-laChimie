@@ -1,1090 +1,378 @@
 package Tests;
 
-import java.io.File;
-import java.io.PrintWriter;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+
+
 
 public class CSVatome {
-	
+	public final static String SEPARATOR = ";";
 	public static void main(String[] args) {
 		try {
-			PrintWriter pw = new PrintWriter (new File("tableauPeriodique.csv"));
-			StringBuilder sb = new StringBuilder();
-			sb.append("# nom");
-			sb.append(",");
-			sb.append("num_atomique");
-			sb.append(",");
-			sb.append("masse_atomique");
-			sb.append(",");
-			sb.append("sym_chimique");
-			sb.append("\r\n");
-			
-			sb.append("hydrogène");
-			sb.append(",");
-			sb.append("1");
-			sb.append(",");
-			sb.append("1.00794");
-			sb.append(",");
-			sb.append("H");
-			sb.append("\r\n");
-			
-			sb.append("hélium");
-			sb.append(",");
-			sb.append("2");
-			sb.append(",");
-			sb.append("4.002602");
-			sb.append(",");
-			sb.append("He");
-			sb.append("\r\n");
-			
-			sb.append("lithium");
-			sb.append(",");
-			sb.append("3");
-			sb.append(",");
-			sb.append("6.941");
-			sb.append(",");
-			sb.append("Li");
-			sb.append("\r\n");
-			
-			sb.append("béryllium");
-			sb.append(",");
-			sb.append("4");
-			sb.append(",");
-			sb.append("9.012182");
-			sb.append(",");
-			sb.append("Be");
-			sb.append("\r\n");
-			
-			sb.append("bore");
-			sb.append(",");
-			sb.append("5");
-			sb.append(",");
-			sb.append("10.811");
-			sb.append(",");
-			sb.append("B");
-			sb.append("\r\n");
-			
-			sb.append("carbone");
-			sb.append(",");
-			sb.append("6");
-			sb.append(",");
-			sb.append("12.011");
-			sb.append(",");
-			sb.append("C");
-			sb.append("\r\n");
-			
-			sb.append("azote");
-			sb.append(",");
-			sb.append("7");
-			sb.append(",");
-			sb.append("14.00674");
-			sb.append(",");
-			sb.append("N");
-			sb.append("\r\n");
-			
-			sb.append("oxygène");
-			sb.append(",");
-			sb.append("8");
-			sb.append(",");
-			sb.append("15.9994");
-			sb.append(",");
-			sb.append("O");
-			sb.append("\r\n");
-			
-			sb.append("fluor");
-			sb.append(",");
-			sb.append("9");
-			sb.append(",");
-			sb.append("18.9984032");
-			sb.append(",");
-			sb.append("F");
-			sb.append("\r\n");
-			
-			sb.append("néon");
-			sb.append(",");
-			sb.append("10");
-			sb.append(",");
-			sb.append("20.1797");
-			sb.append(",");
-			sb.append("Ne");
-			sb.append("\r\n");
-			
-			sb.append("sodium");
-			sb.append(",");
-			sb.append("11");
-			sb.append(",");
-			sb.append("22.989768");
-			sb.append(",");
-			sb.append("Na");
-			sb.append("\r\n");
-			
-			sb.append("magnésium");
-			sb.append(",");
-			sb.append("12");
-			sb.append(",");
-			sb.append("24.305");
-			sb.append(",");
-			sb.append("Mg");
-			sb.append("\r\n");
-			
-			sb.append("aluminium");
-			sb.append(",");
-			sb.append("13");
-			sb.append(",");
-			sb.append("26.981539");
-			sb.append(",");
-			sb.append("Al");
-			sb.append("\r\n");
-			
-			sb.append("silicium");
-			sb.append(",");
-			sb.append("14");
-			sb.append(",");
-			sb.append("28.0855");
-			sb.append(",");
-			sb.append("Si");
-			sb.append("\r\n");
-			
-			sb.append("phosphore");
-			sb.append(",");
-			sb.append("15");
-			sb.append(",");
-			sb.append("30.973762");
-			sb.append(",");
-			sb.append("P");
-			sb.append("\r\n");
-			
-			sb.append("soufre");
-			sb.append(",");
-			sb.append("16");
-			sb.append(",");
-			sb.append("32.066");
-			sb.append(",");
-			sb.append("S");
-			sb.append("\r\n");
-			
-			sb.append("chlore");
-			sb.append(",");
-			sb.append("17");
-			sb.append(",");
-			sb.append("35.4527");
-			sb.append(",");
-			sb.append("Cl");
-			sb.append("\r\n");
-			
-			sb.append("argon");
-			sb.append(",");
-			sb.append("18");
-			sb.append(",");
-			sb.append("39.948");
-			sb.append(",");
-			sb.append("Ar");
-			sb.append("\r\n");
-			
-			sb.append("potassium");
-			sb.append(",");
-			sb.append("19");
-			sb.append(",");
-			sb.append("39.0983");
-			sb.append(",");
-			sb.append("K");
-			sb.append("\r\n");
-			
-			sb.append("calcium");
-			sb.append(",");
-			sb.append("20");
-			sb.append(",");
-			sb.append("40.078");
-			sb.append(",");
-			sb.append("Ca");
-			sb.append("\r\n");
-			
-			sb.append("scandium");
-			sb.append(",");
-			sb.append("21");
-			sb.append(",");
-			sb.append("44.95591");
-			sb.append(",");
-			sb.append("Sc");
-			sb.append("\r\n");
-			
-			sb.append("titane");
-			sb.append(",");
-			sb.append("22");
-			sb.append(",");
-			sb.append("47.95591");
-			sb.append(",");
-			sb.append("Ti");
-			sb.append("\r\n");
-			
-			sb.append("vanadium");
-			sb.append(",");
-			sb.append("23");
-			sb.append(",");
-			sb.append("50.9415");
-			sb.append(",");
-			sb.append("V");
-			sb.append("\r\n");
-			
-			sb.append("chrome");
-			sb.append(",");
-			sb.append("24");
-			sb.append(",");
-			sb.append("51.9961");
-			sb.append(",");
-			sb.append("Cr");
-			sb.append("\r\n");
-			
-			sb.append("manganèse");
-			sb.append(",");
-			sb.append("25");
-			sb.append(",");
-			sb.append("54.93805");
-			sb.append(",");
-			sb.append("Mn");
-			sb.append("\r\n");
-			
-			sb.append("fer");
-			sb.append(",");
-			sb.append("26");
-			sb.append(",");
-			sb.append("55.847");
-			sb.append(",");
-			sb.append("Fe");
-			sb.append("\r\n");
-			
-			sb.append("cobalt");
-			sb.append(",");
-			sb.append("27");
-			sb.append(",");
-			sb.append("58.9332");
-			sb.append(",");
-			sb.append("Co");
-			sb.append("\r\n");
-			
-			sb.append("nickel");
-			sb.append(",");
-			sb.append("28");
-			sb.append(",");
-			sb.append("58.69");
-			sb.append(",");
-			sb.append("Ni");
-			sb.append("\r\n");
-			
-			sb.append("cuivre");
-			sb.append(",");
-			sb.append("29");
-			sb.append(",");
-			sb.append("63.546");
-			sb.append(",");
-			sb.append("Cu");
-			sb.append("\r\n");
-			
-			sb.append("zinc");
-			sb.append(",");
-			sb.append("30");
-			sb.append(",");
-			sb.append("65.39");
-			sb.append(",");
-			sb.append("Zn");
-			sb.append("\r\n");
-			
-			sb.append("gallium");
-			sb.append(",");
-			sb.append("31");
-			sb.append(",");
-			sb.append("69.723");
-			sb.append(",");
-			sb.append("Ga");
-			sb.append("\r\n");
-			
-			sb.append("germanium");
-			sb.append(",");
-			sb.append("32");
-			sb.append(",");
-			sb.append("72.61");
-			sb.append(",");
-			sb.append("Ge");
-			sb.append("\r\n");
-			
-			sb.append("arsenic");
-			sb.append(",");
-			sb.append("33");
-			sb.append(",");
-			sb.append("74.92159");
-			sb.append(",");
-			sb.append("As");
-			sb.append("\r\n");
-			
-			sb.append("sélénium");
-			sb.append(",");
-			sb.append("34");
-			sb.append(",");
-			sb.append("78.96");
-			sb.append(",");
-			sb.append("Se");
-			sb.append("\r\n");
-			
-			sb.append("brome");
-			sb.append(",");
-			sb.append("35");
-			sb.append(",");
-			sb.append("79.904");
-			sb.append(",");
-			sb.append("Br");
-			sb.append("\r\n");
-			
-			sb.append("krypton");
-			sb.append(",");
-			sb.append("36");
-			sb.append(",");
-			sb.append("83.8");
-			sb.append(",");
-			sb.append("Kr");
-			sb.append("\r\n");
-			
-			sb.append("rubidium");
-			sb.append(",");
-			sb.append("37");
-			sb.append(",");
-			sb.append("85.4678");
-			sb.append(",");
-			sb.append("Rb");
-			sb.append("\r\n");
-			
-			sb.append("strontium");
-			sb.append(",");
-			sb.append("38");
-			sb.append(",");
-			sb.append("87.62");
-			sb.append(",");
-			sb.append("Sr");
-			sb.append("\r\n");
-			
-			sb.append("yttrium");
-			sb.append(",");
-			sb.append("39");
-			sb.append(",");
-			sb.append("88.90638");
-			sb.append(",");
-			sb.append("Y");
-			sb.append("\r\n");
-			
-			sb.append("zirconium");
-			sb.append(",");
-			sb.append("40");
-			sb.append(",");
-			sb.append("91.224");
-			sb.append(",");
-			sb.append("Zr");
-			sb.append("\r\n");
-			
-			sb.append("niobium");
-			sb.append(",");
-			sb.append("41");
-			sb.append(",");
-			sb.append("92.9063");
-			sb.append(",");
-			sb.append("Nb");
-			sb.append("\r\n");
-			
-			sb.append("molybdène");
-			sb.append(",");
-			sb.append("42");
-			sb.append(",");
-			sb.append("95.94");
-			sb.append(",");
-			sb.append("Mo");
-			sb.append("\r\n");
-			
-			sb.append("technétium");
-			sb.append(",");
-			sb.append("43");
-			sb.append(",");
-			sb.append("98.9063");
-			sb.append(",");
-			sb.append("Tc");
-			sb.append("\r\n");
-			
-			sb.append("ruthénium");
-			sb.append(",");
-			sb.append("44");
-			sb.append(",");
-			sb.append("101.07");
-			sb.append(",");
-			sb.append("Ru");
-			sb.append("\r\n");
-			
-			sb.append("rhodium");
-			sb.append(",");
-			sb.append("45");
-			sb.append(",");
-			sb.append("102.9055");
-			sb.append(",");
-			sb.append("Rh");
-			sb.append("\r\n");
-			
-			sb.append("palladium");
-			sb.append(",");
-			sb.append("46");
-			sb.append(",");
-			sb.append("106.42");
-			sb.append(",");
-			sb.append("Pd");
-			sb.append("\r\n");
-			
-			sb.append("argent");
-			sb.append(",");
-			sb.append("47");
-			sb.append(",");
-			sb.append("107.8682");
-			sb.append(",");
-			sb.append("Ag");
-			sb.append("\r\n");
-			
-			sb.append("cadmium");
-			sb.append(",");
-			sb.append("48");
-			sb.append(",");
-			sb.append("112.411");
-			sb.append(",");
-			sb.append("Cd");
-			sb.append("\r\n");
-			
-			sb.append("indium");
-			sb.append(",");
-			sb.append("49");
-			sb.append(",");
-			sb.append("114.82");
-			sb.append(",");
-			sb.append("In");
-			sb.append("\r\n");
-			
-			sb.append("étain");
-			sb.append(",");
-			sb.append("50");
-			sb.append(",");
-			sb.append("118.71");
-			sb.append(",");
-			sb.append("Sn");
-			sb.append("\r\n");
-			
-			sb.append("antimoine");
-			sb.append(",");
-			sb.append("51");
-			sb.append(",");
-			sb.append("121.75");
-			sb.append(",");
-			sb.append("Sb");
-			sb.append("\r\n");
-			
-			sb.append("tellure");
-			sb.append(",");
-			sb.append("52");
-			sb.append(",");
-			sb.append("127.6");
-			sb.append(",");
-			sb.append("Te");
-			sb.append("\r\n");
-			
-			sb.append("iode");
-			sb.append(",");
-			sb.append("53");
-			sb.append(",");
-			sb.append("126.90447");
-			sb.append(",");
-			sb.append("I");
-			sb.append("\r\n");
-			
-			sb.append("xénon");
-			sb.append(",");
-			sb.append("54");
-			sb.append(",");
-			sb.append("131.29");
-			sb.append(",");
-			sb.append("Xe");
-			sb.append("\r\n");
-			
-			sb.append("césium");
-			sb.append(",");
-			sb.append("55");
-			sb.append(",");
-			sb.append("132.90543");
-			sb.append(",");
-			sb.append("Cs");
-			sb.append("\r\n");
-			
-			sb.append("baryum");
-			sb.append(",");
-			sb.append("56");
-			sb.append(",");
-			sb.append("137.327");
-			sb.append(",");
-			sb.append("Ba");
-			sb.append("\r\n");
-			
-			sb.append("lanthane");
-			sb.append(",");
-			sb.append("57");
-			sb.append(",");
-			sb.append("138.9055");
-			sb.append(",");
-			sb.append("La");
-			sb.append("\r\n");
-			
-			sb.append("cérium");
-			sb.append(",");
-			sb.append("58");
-			sb.append(",");
-			sb.append("140.115");
-			sb.append(",");
-			sb.append("Ce");
-			sb.append("\r\n");
-			
-			sb.append("preséodyme");
-			sb.append(",");
-			sb.append("59");
-			sb.append(",");
-			sb.append("140.90765");
-			sb.append(",");
-			sb.append("Pr");
-			sb.append("\r\n");
-			
-			sb.append("néodyme");
-			sb.append(",");
-			sb.append("60");
-			sb.append(",");
-			sb.append("144.24");
-			sb.append(",");
-			sb.append("Nd");
-			sb.append("\r\n");
-			
-			sb.append("prométhium");
-			sb.append(",");
-			sb.append("61");
-			sb.append(",");
-			sb.append("146.9151");
-			sb.append(",");
-			sb.append("Pm");
-			sb.append("\r\n");
-			
-			sb.append("samarium");
-			sb.append(",");
-			sb.append("62");
-			sb.append(",");
-			sb.append("150.36");
-			sb.append(",");
-			sb.append("Sm");
-			sb.append("\r\n");
-			
-			sb.append("europium");
-			sb.append(",");
-			sb.append("63");
-			sb.append(",");
-			sb.append("151.965");
-			sb.append(",");
-			sb.append("Eu");
-			sb.append("\r\n");
-			
-			sb.append("gadolinium");
-			sb.append(",");
-			sb.append("64");
-			sb.append(",");
-			sb.append("157.25");
-			sb.append(",");
-			sb.append("Gd");
-			sb.append("\r\n");
-			
-			sb.append("terbium");
-			sb.append(",");
-			sb.append("65");
-			sb.append(",");
-			sb.append("158.92534");
-			sb.append(",");
-			sb.append("Tb");
-			sb.append("\r\n");
-			
-			sb.append("dysprosium");
-			sb.append(",");
-			sb.append("66");
-			sb.append(",");
-			sb.append("162.5");
-			sb.append(",");
-			sb.append("Dy");
-			sb.append("\r\n");
-			
-			sb.append("holmium");
-			sb.append(",");
-			sb.append("67");
-			sb.append(",");
-			sb.append("164.93032");
-			sb.append(",");
-			sb.append("Ho");
-			sb.append("\r\n");
-			
-			sb.append("erbium");
-			sb.append(",");
-			sb.append("68");
-			sb.append(",");
-			sb.append("167.26");
-			sb.append(",");
-			sb.append("Er");
-			sb.append("\r\n");
-			
-			sb.append("thulium");
-			sb.append(",");
-			sb.append("69");
-			sb.append(",");
-			sb.append("168.93421");
-			sb.append(",");
-			sb.append("Tm");
-			sb.append("\r\n");
-			
-			sb.append("ytterbium");
-			sb.append(",");
-			sb.append("70");
-			sb.append(",");
-			sb.append("173.04");
-			sb.append(",");
-			sb.append("Yb");
-			sb.append("\r\n");
-			
-			sb.append("lutécium");
-			sb.append(",");
-			sb.append("71");
-			sb.append(",");
-			sb.append("174.967");
-			sb.append(",");
-			sb.append("Lu");
-			sb.append("\r\n");
-			
-			sb.append("hafnium");
-			sb.append(",");
-			sb.append("72");
-			sb.append(",");
-			sb.append("178.49");
-			sb.append(",");
-			sb.append("Hf");
-			sb.append("\r\n");
-			
-			sb.append("tantale");
-			sb.append(",");
-			sb.append("73");
-			sb.append(",");
-			sb.append("180.9479");
-			sb.append(",");
-			sb.append("Ta");
-			sb.append("\r\n");
-			
-			sb.append("tungstène");
-			sb.append(",");
-			sb.append("74");
-			sb.append(",");
-			sb.append("183.85");
-			sb.append(",");
-			sb.append("W");
-			sb.append("\r\n");
-			
-			sb.append("rhénium");
-			sb.append(",");
-			sb.append("75");
-			sb.append(",");
-			sb.append("186.207");
-			sb.append(",");
-			sb.append("Re");
-			sb.append("\r\n");
-			
-			sb.append("osmium");
-			sb.append(",");
-			sb.append("76");
-			sb.append(",");
-			sb.append("190.2");
-			sb.append(",");
-			sb.append("Os");
-			sb.append("\r\n");
-			
-			sb.append("iridium");
-			sb.append(",");
-			sb.append("77");
-			sb.append(",");
-			sb.append("192.22");
-			sb.append(",");
-			sb.append("Ir");
-			sb.append("\r\n");
-			
-			sb.append("platine");
-			sb.append(",");
-			sb.append("78");
-			sb.append(",");
-			sb.append("195.08");
-			sb.append(",");
-			sb.append("Pt");
-			sb.append("\r\n");
-			
-			sb.append("or");
-			sb.append(",");
-			sb.append("79");
-			sb.append(",");
-			sb.append("196.96654");
-			sb.append(",");
-			sb.append("Au");
-			sb.append("\r\n");
-			
-			sb.append("mercure");
-			sb.append(",");
-			sb.append("80");
-			sb.append(",");
-			sb.append("200.59");
-			sb.append(",");
-			sb.append("Hg");
-			sb.append("\r\n");
-			
-			sb.append("thallium");
-			sb.append(",");
-			sb.append("81");
-			sb.append(",");
-			sb.append("204.3833");
-			sb.append(",");
-			sb.append("Ti");
-			sb.append("\r\n");
-			
-			sb.append("plomb");
-			sb.append(",");
-			sb.append("82");
-			sb.append(",");
-			sb.append("207.2");
-			sb.append(",");
-			sb.append("Pb");
-			sb.append("\r\n");
-			
-			sb.append("bismuth");
-			sb.append(",");
-			sb.append("83");
-			sb.append(",");
-			sb.append("208.98037");
-			sb.append(",");
-			sb.append("Bi");
-			sb.append("\r\n");
-			
-			sb.append("polonium");
-			sb.append(",");
-			sb.append("84");
-			sb.append(",");
-			sb.append("208.9824");
-			sb.append(",");
-			sb.append("Po");
-			sb.append("\r\n");
-			
-			sb.append("astate");
-			sb.append(",");
-			sb.append("85");
-			sb.append(",");
-			sb.append("209.9871");
-			sb.append(",");
-			sb.append("At");
-			sb.append("\r\n");
-			
-			sb.append("radon");
-			sb.append(",");
-			sb.append("86");
-			sb.append(",");
-			sb.append("222.0176");
-			sb.append(",");
-			sb.append("Rn");
-			sb.append("\r\n");
-			
-			sb.append("francium");
-			sb.append(",");
-			sb.append("87");
-			sb.append(",");
-			sb.append("223.0197");
-			sb.append(",");
-			sb.append("Fr");
-			sb.append("\r\n");
-			
-			sb.append("radium");
-			sb.append(",");
-			sb.append("88");
-			sb.append(",");
-			sb.append("226.0254");
-			sb.append(",");
-			sb.append("Ra");
-			sb.append("\r\n");
-			
-			sb.append("actinium");
-			sb.append(",");
-			sb.append("89");
-			sb.append(",");
-			sb.append("227.0278");
-			sb.append(",");
-			sb.append("Ac");
-			sb.append("\r\n");
-			
-			sb.append("thorium");
-			sb.append(",");
-			sb.append("90");
-			sb.append(",");
-			sb.append("232.0381");
-			sb.append(",");
-			sb.append("Th");
-			sb.append("\r\n");
-			
-			sb.append("protactinium");
-			sb.append(",");
-			sb.append("91");
-			sb.append(",");
-			sb.append("231.0359");
-			sb.append(",");
-			sb.append("Pa");
-			sb.append("\r\n");
-			
-			sb.append("uranium");
-			sb.append(",");
-			sb.append("92");
-			sb.append(",");
-			sb.append("238.0289");
-			sb.append(",");
-			sb.append("U");
-			sb.append("\r\n");
-			
-			sb.append("neptunium");
-			sb.append(",");
-			sb.append("93");
-			sb.append(",");
-			sb.append("237.0482");
-			sb.append(",");
-			sb.append("Np");
-			sb.append("\r\n");
-			
-			sb.append("plutonium");
-			sb.append(",");
-			sb.append("94");
-			sb.append(",");
-			sb.append("244.0614");
-			sb.append(",");
-			sb.append("Pu");
-			sb.append("\r\n");
-			
-			sb.append("américium");
-			sb.append(",");
-			sb.append("95");
-			sb.append(",");
-			sb.append("243.0614");
-			sb.append(",");
-			sb.append("Am");
-			sb.append("\r\n");
-			
-			sb.append("curium");
-			sb.append(",");
-			sb.append("96");
-			sb.append(",");
-			sb.append("247.0703");
-			sb.append(",");
-			sb.append("Cm");
-			sb.append("\r\n");
-			
-			sb.append("berkélium");
-			sb.append(",");
-			sb.append("97");
-			sb.append(",");
-			sb.append("247.0703");
-			sb.append(",");
-			sb.append("Bk");
-			sb.append("\r\n");
-			
-			sb.append("californium");
-			sb.append(",");
-			sb.append("98");
-			sb.append(",");
-			sb.append("251.0796");
-			sb.append(",");
-			sb.append("Cf");
-			sb.append("\r\n");
-			
-			sb.append("einsteinium");
-			sb.append(",");
-			sb.append("99");
-			sb.append(",");
-			sb.append("252.0829");
-			sb.append(",");
-			sb.append("Es");
-			sb.append("\r\n");
-			
-			sb.append("fermium");
-			sb.append(",");
-			sb.append("100");
-			sb.append(",");
-			sb.append("257.0951");
-			sb.append(",");
-			sb.append("Fm");
-			sb.append("\r\n");
-			
-			sb.append("mendélévium");
-			sb.append(",");
-			sb.append("101");
-			sb.append(",");
-			sb.append("258.0986");
-			sb.append(",");
-			sb.append("Md");
-			sb.append("\r\n");
-			
-			sb.append("nobélium");
-			sb.append(",");
-			sb.append("102");
-			sb.append(",");
-			sb.append("259.1009");
-			sb.append(",");
-			sb.append("No");
-			sb.append("\r\n");
-			
-			sb.append("lawrencium");
-			sb.append(",");
-			sb.append("103");
-			sb.append(",");
-			sb.append("260.1053");
-			sb.append(",");
-			sb.append("Lr");
-			sb.append("\r\n");
-			
-			sb.append("rutherfordium");
-			sb.append(",");
-			sb.append("104");
-			sb.append(",");
-			sb.append("261.1087");
-			sb.append(",");
-			sb.append("Rf");
-			sb.append("\r\n");
-			
-			sb.append("dubnium");
-			sb.append(",");
-			sb.append("105");
-			sb.append(",");
-			sb.append("262.1138");
-			sb.append(",");
-			sb.append("Db");
-			sb.append("\r\n");
-			
-			sb.append("seaborgium");
-			sb.append(",");
-			sb.append("106");
-			sb.append(",");
-			sb.append("263.1182");
-			sb.append(",");
-			sb.append("Sg");
-			sb.append("\r\n");
-			
-			sb.append("bohrium");
-			sb.append(",");
-			sb.append("107");
-			sb.append(",");
-			sb.append("262.1229");
-			sb.append(",");
-			sb.append("Bh");
-			sb.append("\r\n");
-			
-			sb.append("hassium");
-			sb.append(",");
-			sb.append("108");
-			sb.append(",");
-			sb.append("265");
-			sb.append(",");
-			sb.append("Hs");
-			sb.append("\r\n");
-			
-			sb.append("meitnérium");
-			sb.append(",");
-			sb.append("109");
-			sb.append(",");
-			sb.append("266");
-			sb.append(",");
-			sb.append("Mt");
-			sb.append("\r\n");
-			
-			sb.append("darmstadium");
-			sb.append(",");
-			sb.append("110");
-			sb.append(",");
-			sb.append("269");
-			sb.append(",");
-			sb.append("Ds");
-			sb.append("\r\n");
-			
-			sb.append("roentgenium");
-			sb.append(",");
-			sb.append("111");
-			sb.append(",");
-			sb.append("272");
-			sb.append(",");
-			sb.append("Rg");
-			sb.append("\r\n");
-			
-			sb.append("copernicium");
-			sb.append(",");
-			sb.append("112");
-			sb.append(",");
-			sb.append("277");
-			sb.append(",");
-			sb.append("Cn");
-			sb.append("\r\n");
-			
-			sb.append("nihonium");
-			sb.append(",");
-			sb.append("113");
-			sb.append(",");
-			sb.append("286");
-			sb.append(",");
-			sb.append("Nh");
-			sb.append("\r\n");
-			
-			sb.append("flérovium");
-			sb.append(",");
-			sb.append("114");
-			sb.append(",");
-			sb.append("289");
-			sb.append(",");
-			sb.append("Fl");
-			sb.append("\r\n");
-			
-			sb.append("moscovium");
-			sb.append(",");
-			sb.append("115");
-			sb.append(",");
-			sb.append("288");
-			sb.append(",");
-			sb.append("Mc");
-			sb.append("\r\n");
-			
-			sb.append("livermorium");
-			sb.append(",");
-			sb.append("116");
-			sb.append(",");
-			sb.append("292");
-			sb.append(",");
-			sb.append("Lv");
-			sb.append("\r\n");
-			
-			sb.append("tennesse");
-			sb.append(",");
-			sb.append("117");
-			sb.append(",");
-			sb.append("294");
-			sb.append(",");
-			sb.append("Ts");
-			sb.append("\r\n");
-			
-			sb.append("oganesson");
-			sb.append(",");
-			sb.append("118");
-			sb.append(",");
-			sb.append("294");
-			sb.append(",");
-			sb.append("Og");
-			sb.append("\r\n");
-			pw.write(sb.toString());
-			pw.close();
+			BufferedWriter bw = new BufferedWriter (new FileWriter("tableauPeriodique.csv"));
+			bw.write("# nom" + SEPARATOR + "num_atomique" + SEPARATOR+ "masse_atomique" + SEPARATOR + "sym_chimique" + SEPARATOR + "famille");
+			bw.newLine();
+			
+			bw.write("hydrogène" + SEPARATOR + "1" + SEPARATOR + "1.00794" + SEPARATOR + "H" + SEPARATOR + "non-méteaux");
+			bw.newLine();
+			
+			bw.write("hélium" + SEPARATOR + "2" + SEPARATOR + "4.002602" + SEPARATOR + "He" + SEPARATOR + "gaz nobles");
+			bw.newLine();
+			
+			bw.write("lithium" + SEPARATOR + "3" + SEPARATOR + "6.941" + SEPARATOR +"Li" + SEPARATOR + "alcalins");
+			bw.newLine();
+			
+			bw.write("béryllium" + SEPARATOR + "4" + SEPARATOR + "9.012182" + SEPARATOR + "Be" + SEPARATOR + "alcalino-terreux");
+			bw.newLine();
+			
+			bw.write("bore" + SEPARATOR + "5" + SEPARATOR + "10.811" + SEPARATOR + "B" + SEPARATOR + "métalloïdes");
+			bw.newLine();
+			
+			bw.write("carbone" + SEPARATOR + "6" + SEPARATOR + "12.011" + SEPARATOR + "C" + SEPARATOR + "non-méteaux");
+			bw.newLine();
+			
+			bw.write("azote" + SEPARATOR + "7" + SEPARATOR + "14.00674" + SEPARATOR + "N" + SEPARATOR + "non-méteaux" );
+			bw.newLine();
+			
+			bw.write("oxygène" + SEPARATOR + "8" + SEPARATOR + "15.9994" + SEPARATOR + "O" + SEPARATOR + "non-méteaux");
+			bw.newLine();
+			
+			bw.write("fluor" + SEPARATOR + "9" + SEPARATOR + "18.9984032" + SEPARATOR + "F"  + SEPARATOR + "halogènes");
+			bw.newLine();
+			
+			bw.write("néon" + SEPARATOR + "10" + SEPARATOR + "20.1797" + SEPARATOR + "Ne" + SEPARATOR + "gaz nobles");
+			bw.newLine();
+			
+			bw.write("sodium" + SEPARATOR + "11" + SEPARATOR + "22.989768" + SEPARATOR + "Na" + SEPARATOR + "alcalins");
+			bw.newLine();
+			
+			bw.write("magnésium" + SEPARATOR + "12" + SEPARATOR + "24.305" + SEPARATOR + "Mg" + SEPARATOR + "alcalino-terreux");
+			bw.newLine();
+			
+			bw.write("aluminium" + SEPARATOR + "13" + SEPARATOR + "26.981539" + SEPARATOR + "Al" + SEPARATOR + "méteaux pauvre");
+			bw.newLine();
+			
+			bw.write("silicium" + SEPARATOR + "14" + SEPARATOR + "28.0855" + SEPARATOR + "Si" + SEPARATOR + "métalloïdes");
+			bw.newLine();
+			
+			bw.write("phosphore" + SEPARATOR + "15" + SEPARATOR + "30.973762" + SEPARATOR + "P" + SEPARATOR + "non-méteaux");
+			bw.newLine();
+			
+			bw.write("soufre" + SEPARATOR + "16" + SEPARATOR + "32.066" + SEPARATOR + "S" + SEPARATOR + "non-méteaux");
+			bw.newLine();
+			
+			bw.write("chlore" + SEPARATOR + "17" + SEPARATOR + "35.4527" + SEPARATOR + "Cl"  + SEPARATOR + "halogènes");
+			bw.newLine();
+			
+			bw.write("argon" + SEPARATOR +"18" + SEPARATOR + "39.948" + SEPARATOR + "Ar" + SEPARATOR + "gaz nobles");
+			bw.newLine();
+			
+			bw.write("potassium" + SEPARATOR + "19" + SEPARATOR + "39.0983" + SEPARATOR + "K" + SEPARATOR + "alcalins");
+			bw.newLine();
+			
+			bw.write("calcium" + SEPARATOR + "20" + SEPARATOR + "40.078" + SEPARATOR + "Ca" + SEPARATOR + "alcalino-terreux");
+			bw.newLine();
+			
+			bw.write("scandium" + SEPARATOR + "21" + SEPARATOR + "44.95591" + SEPARATOR + "Sc" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("titane" + SEPARATOR + "22" + SEPARATOR + "47.95591" + SEPARATOR + "Ti" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("vanadium" + SEPARATOR + "23" + SEPARATOR + "50.9415" + SEPARATOR + "V" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("chrome" + SEPARATOR + "24" + SEPARATOR + "51.9961" + SEPARATOR + "Cr" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("manganèse" + SEPARATOR + "25" + SEPARATOR + "54.93805" + SEPARATOR + "Mn" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("fer" + SEPARATOR + "26" + SEPARATOR + "55.847" + SEPARATOR + "Fe" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("cobalt" + SEPARATOR + "27" + SEPARATOR + "58.9332" + SEPARATOR + "Co" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("nickel" + SEPARATOR + "28" + SEPARATOR + "58.69" + SEPARATOR + "Ni" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("cuivre" + SEPARATOR + "29" + SEPARATOR + "63.546" + SEPARATOR + "Cu" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("zinc" + SEPARATOR + "30" + SEPARATOR + "65.39" + SEPARATOR + "Zn" + SEPARATOR + "méteaux pauvre");
+			bw.newLine();
+			
+			bw.write("gallium" + SEPARATOR + "31" + SEPARATOR + "69.723" + SEPARATOR + "Ga" + SEPARATOR + "méteaux pauvre");
+			bw.newLine();
+			
+			bw.write("germanium" + SEPARATOR + "32" + SEPARATOR + "72.61" + SEPARATOR + "Ge" + SEPARATOR + "métalloïdes");
+			bw.newLine();
+			
+			bw.write("arsenic" + SEPARATOR + "33" + SEPARATOR + "74.92159" + SEPARATOR + "As" + SEPARATOR + "métalloïdes");
+			bw.newLine();
+			
+			bw.write("sélénium" + SEPARATOR + "34" + SEPARATOR + "78.96" + SEPARATOR + "Se" + SEPARATOR + "non-méteaux");
+			bw.newLine();
+			
+			bw.write("brome" + SEPARATOR + "35" + SEPARATOR + "79.904" + SEPARATOR + "Br"  + SEPARATOR + "halogènes");
+			bw.newLine();
+			
+			bw.write("krypton" + SEPARATOR + "36" + SEPARATOR + "83.8" + SEPARATOR + "Kr" + SEPARATOR + "gaz nobles");
+			bw.newLine();
+			
+			bw.write("rubidium" + SEPARATOR + "37" + SEPARATOR + "85.4678" + SEPARATOR + "Rb" + SEPARATOR + "alcalins");
+			bw.newLine();
+			
+			bw.write("strontium" + SEPARATOR + "38" + SEPARATOR + "87.62" + SEPARATOR + "Sr" + SEPARATOR + "alcalino-terreux");
+			bw.newLine();
+			
+			bw.write("yttrium" + SEPARATOR + "39" + SEPARATOR + "88.90638" + SEPARATOR + "Y" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("zirconium" + SEPARATOR + "40" + SEPARATOR + "91.224" + SEPARATOR + "Zr" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("niobium" + SEPARATOR + "41" + SEPARATOR + "92.9063" + SEPARATOR + "Nb" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("molybdène" + SEPARATOR + "42" + SEPARATOR + "95.94" + SEPARATOR + "Mo" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("technétium" + SEPARATOR + "43" + SEPARATOR + "98.9063" + SEPARATOR + "Tc" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("ruthénium" + SEPARATOR + "44" + SEPARATOR + "101.07" + SEPARATOR + "Ru" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("rhodium" + SEPARATOR + "45" + SEPARATOR + "102.9055" + SEPARATOR + "Rh" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("palladium" + SEPARATOR + "46" + SEPARATOR + "106.42" + SEPARATOR + "Pd" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("argent" + SEPARATOR + "47" + SEPARATOR + "107.8682" + SEPARATOR + "Ag" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("cadmium" + SEPARATOR + "48" + SEPARATOR + "112.411" + SEPARATOR + "Cd" + SEPARATOR + "méteaux pauvre");
+			bw.newLine();
+			
+			bw.write("indium" + SEPARATOR + "49" + SEPARATOR + "114.82" + SEPARATOR + "In" + SEPARATOR + "méteaux pauvre");
+			bw.newLine();
+			
+			bw.write("étain" + SEPARATOR + "50" + SEPARATOR + "118.71" + SEPARATOR + "Sn" + SEPARATOR + "méteaux pauvre");
+			bw.newLine();
+			
+			bw.write("antimoine" + SEPARATOR + "51" + SEPARATOR + "121.75" + SEPARATOR + "Sb" + SEPARATOR + "métalloïdes");
+			bw.newLine();
+			
+			bw.write("tellure" + SEPARATOR + "52" + SEPARATOR + "127.6" + SEPARATOR + "Te" + SEPARATOR + "métalloïdes");
+			bw.newLine();
+			
+			bw.write("iode" + SEPARATOR + "53" + SEPARATOR + "126.90447" + SEPARATOR + "I"  + SEPARATOR + "halogènes");
+			bw.newLine();
+			
+			bw.write("xénon" + SEPARATOR + "54" + SEPARATOR + "131.29" + SEPARATOR + "Xe" + SEPARATOR + "gaz nobles");
+			bw.newLine();
+			
+			bw.write("césium" + SEPARATOR + "55" + SEPARATOR + "132.90543" + SEPARATOR + "Cs" + SEPARATOR + "alcalins");
+			bw.newLine();
+			
+			bw.write("baryum" + SEPARATOR + "56" + SEPARATOR + "137.327" + SEPARATOR + "Ba" + SEPARATOR + "alcalino-terreux");
+			bw.newLine();
+			
+			bw.write("lanthane" + SEPARATOR + "57" + SEPARATOR + "138.9055" + SEPARATOR + "La" + SEPARATOR + "lanthanides");
+			bw.newLine();
+			
+			bw.write("cérium" + SEPARATOR + "58" + SEPARATOR + "140.115" + SEPARATOR + "Ce" + SEPARATOR + "lanthanides");
+			bw.newLine();
+			
+			bw.write("preséodyme" + SEPARATOR + "59" + SEPARATOR + "140.90765" + SEPARATOR + "Pr" + SEPARATOR + "lanthanides");
+			bw.newLine();
+			
+			bw.write("néodyme" + SEPARATOR + "60" + SEPARATOR + "144.24" + SEPARATOR + "Nd" + SEPARATOR + "lanthanides");
+			bw.newLine();
+			
+			bw.write("prométhium" + SEPARATOR + "61" + SEPARATOR + "146.9151" + SEPARATOR + "Pm" + SEPARATOR + "lanthanides");
+			bw.newLine();
+			
+			bw.write("samarium" + SEPARATOR + "62" + SEPARATOR + "150.36" + SEPARATOR + "Sm" + SEPARATOR + "lanthanides");
+			bw.newLine();
+			
+			bw.write("europium" + SEPARATOR + "63" + SEPARATOR + "151.965" + SEPARATOR + "Eu" + SEPARATOR + "lanthanides");
+			bw.newLine();
+			
+			bw.write("gadolinium" + SEPARATOR + "64" + SEPARATOR + "157.25" + SEPARATOR + "Gd" + SEPARATOR + "lanthanides");
+			bw.newLine();
+			
+			bw.write("terbium" + SEPARATOR + "65" + SEPARATOR + "158.92534" + SEPARATOR + "Tb" + SEPARATOR + "lanthanides");
+			bw.newLine();
+			
+			bw.write("dysprosium" + SEPARATOR + "66" + SEPARATOR + "162.5" + SEPARATOR + "Dy" + SEPARATOR + "lanthanides");
+			bw.newLine();
+			
+			bw.write("holmium" + SEPARATOR + "67" + SEPARATOR + "164.93032" + SEPARATOR + "Ho" + SEPARATOR + "lanthanides");
+			bw.newLine();
+			
+			bw.write("erbium" + SEPARATOR + "68" + SEPARATOR + "167.26" + SEPARATOR + "Er" + SEPARATOR + "lanthanides");
+			bw.newLine();
+			
+			bw.write("thulium" + SEPARATOR + "69" + SEPARATOR + "168.93421" + SEPARATOR + "Tm" + SEPARATOR + "lanthanides");
+			bw.newLine();
+			
+			bw.write("ytterbium" + SEPARATOR + "70" + SEPARATOR + "173.04" + SEPARATOR + "Yb" + SEPARATOR + "lanthanides");
+			bw.newLine();
+			
+			bw.write("lutécium" + SEPARATOR + "71" + SEPARATOR + "174.967" + SEPARATOR + "Lu" + SEPARATOR + "lanthanides");
+			bw.newLine();
+			
+			bw.write("hafnium" + SEPARATOR + "72" + SEPARATOR + "178.49" + SEPARATOR + "Hf" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("tantale" + SEPARATOR + "73" + SEPARATOR + "180.9479" + SEPARATOR + "Ta" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("tungstène" + SEPARATOR + "74" + SEPARATOR + "183.85" + SEPARATOR + "W" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("rhénium" + SEPARATOR + "75" + SEPARATOR + "186.207" + SEPARATOR + "Re" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("osmium" + SEPARATOR + "76" + SEPARATOR + "190.2" + SEPARATOR + "Os" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("iridium" + SEPARATOR + "77" + SEPARATOR + "192.22" + SEPARATOR + "Ir" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("platine" + SEPARATOR + "78" + SEPARATOR + "195.08" + SEPARATOR + "Pt" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("or" + SEPARATOR + "79" + SEPARATOR + "196.96654" + SEPARATOR + "Au" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("mercure" + SEPARATOR + "80" + SEPARATOR + "200.59" + SEPARATOR + "Hg" + SEPARATOR + "méteaux pauvre");
+			bw.newLine();
+			
+			bw.write("thallium" + SEPARATOR + "81" + SEPARATOR + "204.3833" + SEPARATOR + "Ti" + SEPARATOR + "méteaux pauvre");
+			bw.newLine();
+			
+			bw.write("plomb" + SEPARATOR + "82" + SEPARATOR + "207.2" + SEPARATOR + "Pb" + SEPARATOR + "méteaux pauvre");
+			bw.newLine();
+			
+			bw.write("bismuth" + SEPARATOR + "83" + SEPARATOR + "208.98037" + SEPARATOR + "Bi" + SEPARATOR + "méteaux pauvre");
+			bw.newLine();
+			
+			bw.write("polonium" + SEPARATOR + "84" + SEPARATOR + "208.9824" + SEPARATOR + "Po" + SEPARATOR + "méteaux pauvre");
+			bw.newLine();
+			
+			bw.write("astate" + SEPARATOR + "85" + SEPARATOR + "209.9871" + SEPARATOR + "At" + SEPARATOR + "non classé");
+			bw.newLine();
+			
+			bw.write("radon" + SEPARATOR + "86" + SEPARATOR + "222.0176" + SEPARATOR + "Rn" + SEPARATOR + "gaz nobles");
+			bw.newLine();
+			
+			bw.write("francium" + SEPARATOR + "87" + SEPARATOR + "223.0197" + SEPARATOR + "Fr" + SEPARATOR + "alcalins");
+			bw.newLine();
+			
+			bw.write("radium" + SEPARATOR + "88" + SEPARATOR + "226.0254" + SEPARATOR + "Ra" + SEPARATOR + "alcalino-terreux");
+			bw.newLine();
+			
+			bw.write("actinium" + SEPARATOR + "89" + SEPARATOR + "227.0278" + SEPARATOR +"Ac" + SEPARATOR + "actinides");
+			bw.newLine();
+			
+			bw.write("thorium" + SEPARATOR + "90" + SEPARATOR + "232.0381" + SEPARATOR + "Th" + SEPARATOR + "actinides");
+			bw.newLine();
+			
+			bw.write("protactinium" + SEPARATOR + "91" + SEPARATOR + "231.0359" + SEPARATOR + "Pa" + SEPARATOR + "actinides");
+			bw.newLine();
+			
+			bw.write("uranium" + SEPARATOR + "92" + SEPARATOR + "238.0289" + SEPARATOR + "U" + SEPARATOR + "actinides");
+			bw.newLine();
+			
+			bw.write("neptunium" + SEPARATOR + "93" + SEPARATOR + "237.0482" + SEPARATOR + "Np" + SEPARATOR + "actinides");
+			bw.newLine();
+			
+			bw.write("plutonium" + SEPARATOR + "94" + SEPARATOR + "244.0614" + SEPARATOR + "Pu" + SEPARATOR + "actinides");
+			bw.newLine();
+			
+			bw.write("américium" + SEPARATOR + "95" + SEPARATOR + "243.0614" + SEPARATOR + "Am" + SEPARATOR + "actinides");
+			bw.newLine();
+			
+			bw.write("curium" + SEPARATOR + "96" + SEPARATOR + "247.0703" + SEPARATOR + "Cm" + SEPARATOR + "actinides");
+			bw.newLine();
+			
+			bw.write("berkélium" + SEPARATOR + "97" + SEPARATOR + "247.0703" + SEPARATOR + "Bk" + SEPARATOR + "actinides");
+			bw.newLine();
+			
+			bw.write("californium" + SEPARATOR + "98" + SEPARATOR + "251.0796" + SEPARATOR + "Cf" + SEPARATOR + "actinides");
+			bw.newLine();
+			
+			bw.write("einsteinium" + SEPARATOR + "99" + SEPARATOR + "252.0829" + SEPARATOR + "Es" + SEPARATOR + "actinides");
+			bw.newLine();
+			
+			bw.write("fermium" + SEPARATOR + "100" + SEPARATOR + "257.0951" + SEPARATOR + "Fm" + SEPARATOR + "actinides");
+			bw.newLine();
+			
+			bw.write("mendélévium" + SEPARATOR + "101" + SEPARATOR + "258.0986" + SEPARATOR + "Md" + SEPARATOR + "actinides");
+			bw.newLine();
+			
+			bw.write("nobélium" + SEPARATOR + "102" + SEPARATOR + "259.1009" + SEPARATOR + "No" + SEPARATOR + "actinides");
+			bw.newLine();
+			
+			bw.write("lawrencium" + SEPARATOR + "103" + SEPARATOR + "260.1053" + SEPARATOR + "Lr" + SEPARATOR + "actinides");
+			bw.newLine();
+			
+			bw.write("rutherfordium" + SEPARATOR + "104" + SEPARATOR + "261.1087" + SEPARATOR + "Rf" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("dubnium" + SEPARATOR + "105" + SEPARATOR + "262.1138" + SEPARATOR + "Db" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("seaborgium" + SEPARATOR + "106" + SEPARATOR + "263.1182" + SEPARATOR + "Sg" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("bohrium" + SEPARATOR +"107" + SEPARATOR + "262.1229" + SEPARATOR + "Bh" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("hassium" + SEPARATOR + "108" + SEPARATOR + "265" + SEPARATOR + "Hs" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("meitnérium" + SEPARATOR + "109" + SEPARATOR + "266" + SEPARATOR + "Mt" + SEPARATOR + "non classé");
+			bw.newLine();
+			
+			bw.write("darmstadium" + SEPARATOR + "110" + SEPARATOR + "269" + SEPARATOR + "Ds" + SEPARATOR + "non classé");
+			bw.newLine();
+			
+			bw.write("roentgenium" + SEPARATOR + "111" + SEPARATOR + "272" + SEPARATOR + "Rg" + SEPARATOR + "non classé");
+			bw.newLine();
+			
+			bw.write("copernicium" + SEPARATOR + "112" + SEPARATOR + "277" + SEPARATOR + "Cn" + SEPARATOR + "méteaux de transition");
+			bw.newLine();
+			
+			bw.write("nihonium" + SEPARATOR + "113" + SEPARATOR + "286" + SEPARATOR + "Nh" + SEPARATOR + "non classé");
+			bw.newLine();
+			
+			bw.write("flérovium" + SEPARATOR + "114" + SEPARATOR + "289" + SEPARATOR + "Fl" + SEPARATOR + "non classé");
+			bw.newLine();
+			
+			bw.write("moscovium" + SEPARATOR + "115" + SEPARATOR + "288" + SEPARATOR + "Mc" + SEPARATOR + "non classé");
+			bw.newLine();
+			
+			bw.write("livermorium" + SEPARATOR + "116" + SEPARATOR + "292" + SEPARATOR + "Lv" + SEPARATOR + "non classé");
+			bw.newLine();
+			
+			bw.write("tennesse" + SEPARATOR + "117" + SEPARATOR + "294" + SEPARATOR + "Ts" + SEPARATOR + "non classé");
+			bw.newLine();
+			
+			bw.write("oganesson" + SEPARATOR + "118" + SEPARATOR + "294" + SEPARATOR + "Og" + SEPARATOR + "non classé");
+			bw.newLine();
+		
+			bw.close();
 			System.out.println("finished");
 		}
 		catch (Exception e) {
 			//TODO : handle exception
 		}
 	}
-}
+}	
+

@@ -1,119 +1,119 @@
-# nom,num_atomique,masse_atomique,sym_chimique
-hydrogène,1,1.00794,H
-hélium,2,4.002602,He
-lithium,3,6.941,Li
-béryllium,4,9.012182,Be
-bore,5,10.811,B
-carbone,6,12.011,C
-azote,7,14.00674,N
-oxygène,8,15.9994,O
-fluor,9,18.9984032,F
-néon,10,20.1797,Ne
-sodium,11,22.989768,Na
-magnésium,12,24.305,Mg
-aluminium,13,26.981539,Al
-silicium,14,28.0855,Si
-phosphore,15,30.973762,P
-soufre,16,32.066,S
-chlore,17,35.4527,Cl
-argon,18,39.948,Ar
-potassium,19,39.0983,K
-calcium,20,40.078,Ca
-scandium,21,44.95591,Sc
-titane,22,47.95591,Ti
-vanadium,23,50.9415,V
-chrome,24,51.9961,Cr
-manganèse,25,54.93805,Mn
-fer,26,55.847,Fe
-cobalt,27,58.9332,Co
-nickel,28,58.69,Ni
-cuivre,29,63.546,Cu
-zinc,30,65.39,Zn
-gallium,31,69.723,Ga
-germanium,32,72.61,Ge
-arsenic,33,74.92159,As
-sélénium,34,78.96,Se
-brome,35,79.904,Br
-krypton,36,83.8,Kr
-rubidium,37,85.4678,Rb
-strontium,38,87.62,Sr
-yttrium,39,88.90638,Y
-zirconium,40,91.224,Zr
-niobium,41,92.9063,Nb
-molybdène,42,95.94,Mo
-technétium,43,98.9063,Tc
-ruthénium,44,101.07,Ru
-rhodium,45,102.9055,Rh
-palladium,46,106.42,Pd
-argent,47,107.8682,Ag
-cadmium,48,112.411,Cd
-indium,49,114.82,In
-étain,50,118.71,Sn
-antimoine,51,121.75,Sb
-tellure,52,127.6,Te
-iode,53,126.90447,I
-xénon,54,131.29,Xe
-césium,55,132.90543,Cs
-baryum,56,137.327,Ba
-lanthane,57,138.9055,La
-cérium,58,140.115,Ce
-preséodyme,59,140.90765,Pr
-néodyme,60,144.24,Nd
-prométhium,61,146.9151,Pm
-samarium,62,150.36,Sm
-europium,63,151.965,Eu
-gadolinium,64,157.25,Gd
-terbium,65,158.92534,Tb
-dysprosium,66,162.5,Dy
-holmium,67,164.93032,Ho
-erbium,68,167.26,Er
-thulium,69,168.93421,Tm
-ytterbium,70,173.04,Yb
-lutécium,71,174.967,Lu
-hafnium,72,178.49,Hf
-tantale,73,180.9479,Ta
-tungstène,74,183.85,W
-rhénium,75,186.207,Re
-osmium,76,190.2,Os
-iridium,77,192.22,Ir
-platine,78,195.08,Pt
-or,79,196.96654,Au
-mercure,80,200.59,Hg
-thallium,81,204.3833,Ti
-plomb,82,207.2,Pb
-bismuth,83,208.98037,Bi
-polonium,84,208.9824,Po
-astate,85,209.9871,At
-radon,86,222.0176,Rn
-francium,87,223.0197,Fr
-radium,88,226.0254,Ra
-actinium,89,227.0278,Ac
-thorium,90,232.0381,Th
-protactinium,91,231.0359,Pa
-uranium,92,238.0289,U
-neptunium,93,237.0482,Np
-plutonium,94,244.0614,Pu
-américium,95,243.0614,Am
-curium,96,247.0703,Cm
-berkélium,97,247.0703,Bk
-californium,98,251.0796,Cf
-einsteinium,99,252.0829,Es
-fermium,100,257.0951,Fm
-mendélévium,101,258.0986,Md
-nobélium,102,259.1009,No
-lawrencium,103,260.1053,Lr
-rutherfordium,104,261.1087,Rf
-dubnium,105,262.1138,Db
-seaborgium,106,263.1182,Sg
-bohrium,107,262.1229,Bh
-hassium,108,265,Hs
-meitnérium,109,266,Mt
-darmstadium,110,269,Ds
-roentgenium,111,272,Rg
-copernicium,112,277,Cn
-nihonium,113,286,Nh
-flérovium,114,289,Fl
-moscovium,115,288,Mc
-livermorium,116,292,Lv
-tennesse,117,294,Ts
-oganesson,118,294,Og
+# nom;num_atomique;masse_atomique;sym_chimique;famille
+hydrogène;1;1.00794;H;non-méteaux
+hélium;2;4.002602;He;gaz nobles
+lithium;3;6.941;Li;alcalins
+béryllium;4;9.012182;Be;alcalino-terreux
+bore;5;10.811;B;métalloïdes
+carbone;6;12.011;C;non-méteaux
+azote;7;14.00674;N;non-méteaux
+oxygène;8;15.9994;O;non-méteaux
+fluor;9;18.9984032;F;halogènes
+néon;10;20.1797;Ne;gaz nobles
+sodium;11;22.989768;Na;alcalins
+magnésium;12;24.305;Mg;alcalino-terreux
+aluminium;13;26.981539;Al;méteaux pauvre
+silicium;14;28.0855;Si;métalloïdes
+phosphore;15;30.973762;P;non-méteaux
+soufre;16;32.066;S;non-méteaux
+chlore;17;35.4527;Cl;halogènes
+argon;18;39.948;Ar;gaz nobles
+potassium;19;39.0983;K;alcalins
+calcium;20;40.078;Ca;alcalino-terreux
+scandium;21;44.95591;Sc;méteaux de transition
+titane;22;47.95591;Ti;méteaux de transition
+vanadium;23;50.9415;V;méteaux de transition
+chrome;24;51.9961;Cr;méteaux de transition
+manganèse;25;54.93805;Mn;méteaux de transition
+fer;26;55.847;Fe;méteaux de transition
+cobalt;27;58.9332;Co;méteaux de transition
+nickel;28;58.69;Ni;méteaux de transition
+cuivre;29;63.546;Cu;méteaux de transition
+zinc;30;65.39;Zn;méteaux pauvre
+gallium;31;69.723;Ga;méteaux pauvre
+germanium;32;72.61;Ge;métalloïdes
+arsenic;33;74.92159;As;métalloïdes
+sélénium;34;78.96;Se;non-méteaux
+brome;35;79.904;Br;halogènes
+krypton;36;83.8;Kr;gaz nobles
+rubidium;37;85.4678;Rb;alcalins
+strontium;38;87.62;Sr;alcalino-terreux
+yttrium;39;88.90638;Y;méteaux de transition
+zirconium;40;91.224;Zr;méteaux de transition
+niobium;41;92.9063;Nb;méteaux de transition
+molybdène;42;95.94;Mo;méteaux de transition
+technétium;43;98.9063;Tc;méteaux de transition
+ruthénium;44;101.07;Ru;méteaux de transition
+rhodium;45;102.9055;Rh;méteaux de transition
+palladium;46;106.42;Pd;méteaux de transition
+argent;47;107.8682;Ag;méteaux de transition
+cadmium;48;112.411;Cd;méteaux pauvre
+indium;49;114.82;In;méteaux pauvre
+étain;50;118.71;Sn;méteaux pauvre
+antimoine;51;121.75;Sb;métalloïdes
+tellure;52;127.6;Te;métalloïdes
+iode;53;126.90447;I;halogènes
+xénon;54;131.29;Xe;gaz nobles
+césium;55;132.90543;Cs;alcalins
+baryum;56;137.327;Ba;alcalino-terreux
+lanthane;57;138.9055;La;lanthanides
+cérium;58;140.115;Ce;lanthanides
+preséodyme;59;140.90765;Pr;lanthanides
+néodyme;60;144.24;Nd;lanthanides
+prométhium;61;146.9151;Pm;lanthanides
+samarium;62;150.36;Sm;lanthanides
+europium;63;151.965;Eu;lanthanides
+gadolinium;64;157.25;Gd;lanthanides
+terbium;65;158.92534;Tb;lanthanides
+dysprosium;66;162.5;Dy;lanthanides
+holmium;67;164.93032;Ho;lanthanides
+erbium;68;167.26;Er;lanthanides
+thulium;69;168.93421;Tm;lanthanides
+ytterbium;70;173.04;Yb;lanthanides
+lutécium;71;174.967;Lu;lanthanides
+hafnium;72;178.49;Hf;méteaux de transition
+tantale;73;180.9479;Ta;méteaux de transition
+tungstène;74;183.85;W;méteaux de transition
+rhénium;75;186.207;Re;méteaux de transition
+osmium;76;190.2;Os;méteaux de transition
+iridium;77;192.22;Ir;méteaux de transition
+platine;78;195.08;Pt;méteaux de transition
+or;79;196.96654;Au;méteaux de transition
+mercure;80;200.59;Hg;méteaux pauvre
+thallium;81;204.3833;Ti;méteaux pauvre
+plomb;82;207.2;Pb;méteaux pauvre
+bismuth;83;208.98037;Bi;méteaux pauvre
+polonium;84;208.9824;Po;méteaux pauvre
+astate;85;209.9871;At;non classé
+radon;86;222.0176;Rn;gaz nobles
+francium;87;223.0197;Fr;alcalins
+radium;88;226.0254;Ra;alcalino-terreux
+actinium;89;227.0278;Ac;actinides
+thorium;90;232.0381;Th;actinides
+protactinium;91;231.0359;Pa;actinides
+uranium;92;238.0289;U;actinides
+neptunium;93;237.0482;Np;actinides
+plutonium;94;244.0614;Pu;actinides
+américium;95;243.0614;Am;actinides
+curium;96;247.0703;Cm;actinides
+berkélium;97;247.0703;Bk;actinides
+californium;98;251.0796;Cf;actinides
+einsteinium;99;252.0829;Es;actinides
+fermium;100;257.0951;Fm;actinides
+mendélévium;101;258.0986;Md;actinides
+nobélium;102;259.1009;No;actinides
+lawrencium;103;260.1053;Lr;actinides
+rutherfordium;104;261.1087;Rf;méteaux de transition
+dubnium;105;262.1138;Db;méteaux de transition
+seaborgium;106;263.1182;Sg;méteaux de transition
+bohrium;107;262.1229;Bh;méteaux de transition
+hassium;108;265;Hs;méteaux de transition
+meitnérium;109;266;Mt;non classé
+darmstadium;110;269;Ds;non classé
+roentgenium;111;272;Rg;non classé
+copernicium;112;277;Cn;méteaux de transition
+nihonium;113;286;Nh;non classé
+flérovium;114;289;Fl;non classé
+moscovium;115;288;Mc;non classé
+livermorium;116;292;Lv;non classé
+tennesse;117;294;Ts;non classé
+oganesson;118;294;Og;non classé

@@ -16,7 +16,7 @@ public class ListAtome {
 		at.add(atome);
 	}
 	
-	 public Atome recherchenom(String nom) { 
+	 public  Atome recherchenom(String nom) { 
 	    	for(int i = 0; i < at.size(); i++) { 
 	    		if(at.get(i).getNom().equals(nom)) {
 	    			return at.get(i);
@@ -25,7 +25,7 @@ public class ListAtome {
 	    	return null;
 	    }
 	 
-	 /***
+	 
 	 public String affichagefamille(String nom) {
 		 String result = "" ;
 		    for(int i = 0; i < at.size(); i++) { 
@@ -35,8 +35,8 @@ public class ListAtome {
 		    	}
 		    	return result;
 		    }
-	***/
-	 
+	
+	
 	public String toString() {
 		String result = "";
 		for (Atome atome : at) {

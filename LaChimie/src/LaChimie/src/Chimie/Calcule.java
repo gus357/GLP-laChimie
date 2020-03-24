@@ -9,8 +9,8 @@ public class Calcule {
 		this.molecule = molecule;
 	}
 	
-	public Double MasseMolaire(Molecule molecule) {
-		Double Mm =(double)0;
+	public double MasseMolaire(Molecule molecule) {
+		double Mm = 0;
 		return Mm;
 	
 	}
