@@ -1,6 +1,6 @@
 package Tests;
 
-import Chimie.U;
+import Chimie.TableMende;
 
 public class Test {
 	
@@ -9,7 +9,7 @@ public class Test {
 		//Fenetre fen = new Fenetre("tableau de mendeliev");
 	//	fen.init();
 		
-		U u = new U();
+		TableMende u = new TableMende();
 		
 	}
 

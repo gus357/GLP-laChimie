@@ -77,7 +77,7 @@ public class Accueil extends JFrame{
 	
 	private class ActionTable implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
-			U u = new U();
+			TableMende u = new TableMende();
 			u.setVisible(true);
 		}
 	}

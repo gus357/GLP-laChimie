@@ -55,9 +55,9 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
-public class U extends JFrame{
+public class TableMende extends JFrame{
 	//private static final long serialVersionUID = 1L;
-	public U(){
+	public TableMende(){
 		
     this.setTitle("Table de Mendelieve");
     this.setSize(1150, 400);
