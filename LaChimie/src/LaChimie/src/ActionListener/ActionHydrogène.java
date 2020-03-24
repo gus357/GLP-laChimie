@@ -14,6 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 import Chimie.Atome;
+import Chimie.Pauli;
 import Chimie.U;
 import Data.ReadCsv;
 
@@ -21,20 +22,16 @@ public class ActionHydrogène extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		//JLabel h = new JLabel();
-		
-		
+		JLabel h = new JLabel();
 		
 		ReadCsv r = new ReadCsv() ;
-		r.recherchenom("hydrogène");
-		r.ReadCSVAtome(",","tableauPeriodique.csv");
-		
-		System.out.println(r);
-		/***
-		h.setText(""+r);
+		r.ReadCSVAtome(";","tableauPeriodique.csv");
+		Pauli y = new Pauli();
+
+		String i = "hydrogène";
+		h.setText(r.recherchenom(i)+"\n"+y.couche(i));
 		this.add(h);
 		this.pack();
 		this.setVisible(true);
-		***/
 	}
 }

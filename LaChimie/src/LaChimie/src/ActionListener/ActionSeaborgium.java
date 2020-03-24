@@ -9,7 +9,7 @@ import javax.swing.JLabel;
 import Chimie.Pauli;
 import Data.ReadCsv;
 
-public class ActionZirconcium extends JFrame implements ActionListener {
+public class ActionSeaborgium extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -19,7 +19,7 @@ public class ActionZirconcium extends JFrame implements ActionListener {
 		r.ReadCSVAtome(";","tableauPeriodique.csv");
 		Pauli y = new Pauli();
 
-		String i = "zirconium";
+		String i = "seaborgium";
 		h.setText(r.recherchenom(i)+"\n"+y.couche(i));
 		this.add(h);
 		this.pack();

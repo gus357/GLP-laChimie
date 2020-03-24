@@ -18,7 +18,7 @@ public class TestCSV  {
 		//System.out.println(a.toString());
 		//System.out.println(a.getNumAtomique());
 		System.out.println(y.couche("oganesson"));		
-		//System.out.println(t.recherchenom("hydrogène"));
+		System.out.println(t.recherchenom("oganesson"));
 		
 		}
 	

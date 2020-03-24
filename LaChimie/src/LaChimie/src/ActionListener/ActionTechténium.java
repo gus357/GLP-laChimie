@@ -9,17 +9,18 @@ import javax.swing.JLabel;
 import Chimie.Pauli;
 import Data.ReadCsv;
 
-public class ActionZirconcium extends JFrame implements ActionListener {
+public class ActionTechténium extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
 		JLabel h = new JLabel();
 		
 		ReadCsv r = new ReadCsv() ;
 		r.ReadCSVAtome(";","tableauPeriodique.csv");
 		Pauli y = new Pauli();
 
-		String i = "zirconium";
+		String i = "technétium";
 		h.setText(r.recherchenom(i)+"\n"+y.couche(i));
 		this.add(h);
 		this.pack();

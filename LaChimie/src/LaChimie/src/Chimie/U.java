@@ -30,6 +30,7 @@ import ActionListener.ActionHydrogène;
 import ActionListener.ActionLanthanides;
 import ActionListener.ActionLithium;
 import ActionListener.ActionMagnésium;
+import ActionListener.ActionManganèse;
 import ActionListener.ActionMolibdène;
 import ActionListener.ActionNobium;
 import ActionListener.ActionPotassium;
@@ -37,14 +38,17 @@ import ActionListener.ActionRadium;
 import ActionListener.ActionRubidium;
 import ActionListener.ActionRutherfordium;
 import ActionListener.ActionScandium;
+import ActionListener.ActionSeaborgium;
 import ActionListener.ActionSodium;
 import ActionListener.ActionStrontium;
 import ActionListener.ActionTantale;
+import ActionListener.ActionTechténium;
 import ActionListener.ActionTitane;
 import ActionListener.ActionTungstène;
 import ActionListener.ActionVanadium;
 import ActionListener.ActionYttrium;
 import ActionListener.ActionZirconcium;
+import Data.ReadCsv;
 
 import javax.print.DocFlavor.URL;
 import javax.swing.Icon;
@@ -60,7 +64,7 @@ public class U extends JFrame{
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     this.setLocationRelativeTo(null);
 	this.getContentPane().setLayout(new FlowLayout());
-
+	
     // premiÃ¨re colonne
     
     JPanel cell1 = new JPanel();
@@ -274,6 +278,7 @@ public class U extends JFrame{
     cell29.setPreferredSize(new Dimension(150, 75));
     JButton but29 = new JButton ("Sg");
     but29.setPreferredSize(new Dimension (100,35));
+    but29.addActionListener(new ActionSeaborgium());
     cell29.add(but29);
     
     // septiÃ¨me colonne
@@ -282,12 +287,14 @@ public class U extends JFrame{
     cell30.setPreferredSize(new Dimension(150, 75));
     JButton but30 = new JButton ("Mn");
     but30.setPreferredSize(new Dimension (100,35));
+    but30.addActionListener(new ActionManganèse());
     cell30.add(but30);
     
     JPanel cell31 = new JPanel();
     cell31.setPreferredSize(new Dimension(150, 75));
     JButton but31 = new JButton ("Tc");
     but31.setPreferredSize(new Dimension (100,35));
+    but31.addActionListener(new ActionTechténium());
     cell31.add(but31);
     
     JPanel cell32 = new JPanel();
