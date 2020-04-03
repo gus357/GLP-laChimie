@@ -10,6 +10,9 @@ import java.awt.Insets;
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -17,39 +20,100 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
+import ActionListener.AcionFer;
 import ActionListener.ActionActinides;
+import ActionListener.ActionAluminium;
+import ActionListener.ActionAntimoine;
+import ActionListener.ActionArgent;
+import ActionListener.ActionArgon;
+import ActionListener.ActionArsenic;
+import ActionListener.ActionAstate;
+import ActionListener.ActionAzote;
 import ActionListener.ActionBaryum;
+import ActionListener.ActionBismuth;
+import ActionListener.ActionBohrium;
+import ActionListener.ActionBore;
+import ActionListener.ActionBrome;
 import ActionListener.ActionBérillium;
+import ActionListener.ActionCadmium;
 import ActionListener.ActionCalcium;
+import ActionListener.ActionCarbone;
+import ActionListener.ActionChlore;
 import ActionListener.ActionChrome;
+import ActionListener.ActionCobalt;
+import ActionListener.ActionCopernicium;
+import ActionListener.ActionCuivre;
 import ActionListener.ActionCésium;
+import ActionListener.ActionDarmstadium;
 import ActionListener.ActionDubnium;
+import ActionListener.ActionEtain;
+import ActionListener.ActionFlerovium;
+import ActionListener.ActionFluor;
 import ActionListener.ActionFrancium;
+import ActionListener.ActionGallium;
+import ActionListener.ActionGermanium;
 import ActionListener.ActionHafnium;
+import ActionListener.ActionHassium;
 import ActionListener.ActionHydrogène;
+import ActionListener.ActionHélium;
+import ActionListener.ActionIndium;
+import ActionListener.ActionIode;
+import ActionListener.ActionIridium;
+import ActionListener.ActionKrypton;
 import ActionListener.ActionLanthanides;
 import ActionListener.ActionLithium;
+import ActionListener.ActionLivermorium;
 import ActionListener.ActionMagnésium;
 import ActionListener.ActionManganèse;
+import ActionListener.ActionMeitnérium;
+import ActionListener.ActionMercure;
 import ActionListener.ActionMolibdène;
+import ActionListener.ActionMoscovium;
+import ActionListener.ActionNickel;
+import ActionListener.ActionNihonium;
 import ActionListener.ActionNobium;
+import ActionListener.ActionNéon;
+import ActionListener.ActionOganesson;
+import ActionListener.ActionOr;
+import ActionListener.ActionOsmium;
+import ActionListener.ActionOxygène;
+import ActionListener.ActionPalladium;
+import ActionListener.ActionPhosphore;
+import ActionListener.ActionPlatine;
+import ActionListener.ActionPlomb;
+import ActionListener.ActionPolonium;
 import ActionListener.ActionPotassium;
 import ActionListener.ActionRadium;
+import ActionListener.ActionRadon;
+import ActionListener.ActionRhodium;
+import ActionListener.ActionRoentgenium;
 import ActionListener.ActionRubidium;
 import ActionListener.ActionRutherfordium;
+import ActionListener.ActionRuthénium;
+import ActionListener.ActionRénium;
 import ActionListener.ActionScandium;
 import ActionListener.ActionSeaborgium;
+import ActionListener.ActionSilicium;
 import ActionListener.ActionSodium;
+import ActionListener.ActionSoufre;
 import ActionListener.ActionStrontium;
+import ActionListener.ActionSélénium;
 import ActionListener.ActionTantale;
 import ActionListener.ActionTechténium;
+import ActionListener.ActionTellure;
+import ActionListener.ActionTennesse;
+import ActionListener.ActionThalium;
 import ActionListener.ActionTitane;
 import ActionListener.ActionTungstène;
 import ActionListener.ActionVanadium;
+import ActionListener.ActionXénon;
 import ActionListener.ActionYttrium;
+import ActionListener.ActionZinc;
 import ActionListener.ActionZirconcium;
 import Data.ReadCsv;
+import Chimie.imgAtome.*;
 
+import javax.imageio.ImageIO;
 import javax.print.DocFlavor.URL;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -57,10 +121,10 @@ import javax.swing.JButton;
 
 public class TableMende extends JFrame{
 	//private static final long serialVersionUID = 1L;
-	public TableMende(){
+	public TableMende() throws IOException{
 		
     this.setTitle("Table de Mendelieve");
-    this.setSize(1150, 400);
+    this.setSize(1000, 700);
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     this.setLocationRelativeTo(null);
 	this.getContentPane().setLayout(new FlowLayout());
@@ -68,796 +132,1091 @@ public class TableMende extends JFrame{
     // premiÃ¨re colonne
     
     JPanel cell1 = new JPanel();
-    cell1.setPreferredSize(new Dimension(150, 75));
-    JButton but1 = new JButton ("H");
-    but1.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture1 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/h.png"));
+	ImageIcon image1 = new ImageIcon(myPicture1); 
+    cell1.setPreferredSize(new Dimension(50, 65));
+    JButton but1 = new JButton ((image1));
+    but1.setPreferredSize(new Dimension (50,60));
 	but1.addActionListener(new ActionHydrogène());
 	but1.setToolTipText("Hydrogène");
 	cell1.add(but1);
     
     JPanel cell2 = new JPanel();
-    cell2.setPreferredSize(new Dimension(150, 75));
-    JButton but2 = new JButton ("Li");
-    but2.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture2 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Li.png"));
+	ImageIcon image2 = new ImageIcon(myPicture2);
+    cell2.setPreferredSize(new Dimension(50, 65));
+    JButton but2 = new JButton (image2);
+    but2.setPreferredSize(new Dimension (50,60));
 	but2.addActionListener(new ActionLithium());
     cell2.add(but2);
     
     JPanel cell3 = new JPanel();
-    cell3.setPreferredSize(new Dimension(150, 75));
-    JButton but3 = new JButton ("Na");
-    but3.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture3 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Na.png"));
+	ImageIcon image3 = new ImageIcon(myPicture3);
+    cell3.setPreferredSize(new Dimension(50, 65));
+    JButton but3 = new JButton (image3);
+    but3.setPreferredSize(new Dimension (50,60));
     but3.addActionListener(new ActionSodium());
     cell3.add(but3);
     
     JPanel cell4 = new JPanel();
-    cell4.setPreferredSize(new Dimension(150, 75));
-    JButton but4 = new JButton ("K");
-    but4.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture4 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/K.png"));
+	ImageIcon image4 = new ImageIcon(myPicture4);
+    cell4.setPreferredSize(new Dimension(50, 65));
+    JButton but4 = new JButton (image4);
+    but4.setPreferredSize(new Dimension (50,60));
     but4.addActionListener(new ActionPotassium());
     cell4.add(but4);
     
     JPanel cell5 = new JPanel();
-    cell5.setPreferredSize(new Dimension(150, 75));
-    JButton but5 = new JButton ("Rb");
-    but5.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture5 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Rb.png"));
+	ImageIcon image5 = new ImageIcon(myPicture5);
+    cell5.setPreferredSize(new Dimension(50, 65));
+    JButton but5 = new JButton (image5);
+    but5.setPreferredSize(new Dimension (50,60));
     but5.addActionListener(new ActionRubidium());
     cell5.add(but5);
     
     JPanel cell6 = new JPanel();
-    cell6.setPreferredSize(new Dimension(150, 75));
-    JButton but6 = new JButton ("Cs");
-    but6.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture6 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Cs.png"));
+	ImageIcon image6 = new ImageIcon(myPicture6);
+    cell6.setPreferredSize(new Dimension(50, 65));
+    JButton but6 = new JButton (image6);
+    but6.setPreferredSize(new Dimension (50,60));
     but6.addActionListener(new ActionCésium());
     cell6.add(but6);
     
     JPanel cell7 = new JPanel();
-    cell7.setPreferredSize(new Dimension(150, 75));
-    JButton but7 = new JButton ("Fr");
-    but7.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture7 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Fr.png"));
+	ImageIcon image7 = new ImageIcon(myPicture7);
+    cell7.setPreferredSize(new Dimension(50, 65));
+    JButton but7 = new JButton (image7);
+    but7.setPreferredSize(new Dimension (50,60));
     but7.addActionListener(new ActionFrancium());
     cell7.add(but7);
     
     // deuxiÃ¨me colonne
     
     JPanel cell8 = new JPanel();
-    cell8.setPreferredSize(new Dimension(150, 75));
-    JButton but8 = new JButton ("Be");
-    but8.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture8 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Be.png"));
+	ImageIcon image8 = new ImageIcon(myPicture8);
+    cell8.setPreferredSize(new Dimension(50, 65));
+    JButton but8 = new JButton (image8);
+    but8.setPreferredSize(new Dimension (50,60));
     but8.addActionListener(new ActionBérillium());
     cell8.add(but8);
     
     JPanel cell9 = new JPanel();
-    cell9.setPreferredSize(new Dimension(150, 75));
-    JButton but9 = new JButton ("Mg");
-    but9.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture9 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Mg.png"));
+	ImageIcon image9 = new ImageIcon(myPicture9);
+    cell9.setPreferredSize(new Dimension(50, 65));
+    JButton but9 = new JButton (image9);
+    but9.setPreferredSize(new Dimension (50,60));
     but9.addActionListener(new ActionMagnésium());
     cell9.add(but9);
     
     JPanel cell10 = new JPanel();
-    cell10.setPreferredSize(new Dimension(150, 75));
-    JButton but10 = new JButton ("Ca");
-    but10.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture10 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Ca.png"));
+	ImageIcon image10 = new ImageIcon(myPicture10);
+    cell10.setPreferredSize(new Dimension(50, 65));
+    JButton but10 = new JButton (image10);
+    but10.setPreferredSize(new Dimension (50,60));
     but10.addActionListener(new ActionCalcium());
     cell10.add(but10);
     
     JPanel cell11 = new JPanel();
-    cell11.setPreferredSize(new Dimension(150, 75));
-    JButton but11 = new JButton ("Sr");
-    but11.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture11 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Sr.png"));
+	ImageIcon image11 = new ImageIcon(myPicture11);
+    cell11.setPreferredSize(new Dimension(50, 65));
+    JButton but11 = new JButton (image11);
+    but11.setPreferredSize(new Dimension (50,60));
     but11.addActionListener(new ActionStrontium());
     cell11.add(but11);
     
     JPanel cell12 = new JPanel();
-    cell12.setPreferredSize(new Dimension(150, 75));
-    JButton but12 = new JButton ("Ba");
-    but12.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture12 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Ba.png"));
+	ImageIcon image12 = new ImageIcon(myPicture12);
+    cell12.setPreferredSize(new Dimension(50, 65));
+    JButton but12 = new JButton (image12);
+    but12.setPreferredSize(new Dimension (50,60));
     but12.addActionListener(new ActionBaryum());
     cell12.add(but12);
     
     JPanel cell13 = new JPanel();
-    cell13.setPreferredSize(new Dimension(150, 75));
-    JButton but13 = new JButton ("Ra");
-    but13.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture13 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Ra.png"));
+	ImageIcon image13 = new ImageIcon(myPicture13);
+    cell13.setPreferredSize(new Dimension(50, 65));
+    JButton but13 = new JButton (image13);
+    but13.setPreferredSize(new Dimension (50,60));
     but13.addActionListener(new ActionRadium());
     cell13.add(but13);
     
     // troisiÃ¨me colonne
     
     JPanel cell14 = new JPanel();
-    cell14.setPreferredSize(new Dimension(150, 75));
-    JButton but14 = new JButton ("Sc");
-    but14.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture14 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Sc.png"));
+	ImageIcon image14 = new ImageIcon(myPicture14);
+    cell14.setPreferredSize(new Dimension(50, 65));
+    JButton but14 = new JButton (image14);
+    but14.setPreferredSize(new Dimension (50,60));
     but14.addActionListener(new ActionScandium());
     cell14.add(but14);
     
     JPanel cell15 = new JPanel();
-    cell15.setPreferredSize(new Dimension(150, 75));
-    JButton but15 = new JButton ("Y");
-    but15.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture15 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Y.png"));
+	ImageIcon image15 = new ImageIcon(myPicture15);
+    cell15.setPreferredSize(new Dimension(50, 65));
+    JButton but15 = new JButton (image15);
+    but15.setPreferredSize(new Dimension (50,60));
     but15.addActionListener(new ActionYttrium());
     cell15.add(but15);
     
     JPanel cell16 = new JPanel();
-    cell16.setPreferredSize(new Dimension(150, 75));
-    JButton but16 = new JButton ("lanthanides");
-    but16.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture16 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/lanthanides.png"));
+	ImageIcon image16 = new ImageIcon(myPicture16);
+    cell16.setPreferredSize(new Dimension(90, 65));
+    JButton but16 = new JButton (image16);
+    but16.setPreferredSize(new Dimension (90,60));
     but16.addActionListener(new ActionLanthanides());
     cell16.add(but16);
 			
     JPanel cell17 = new JPanel();
-    cell17.setPreferredSize(new Dimension(150, 75));
-    JButton but17 = new JButton ("Actinides");
-    but17.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture17 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Actinides.png"));
+	ImageIcon image17 = new ImageIcon(myPicture17);
+    cell17.setPreferredSize(new Dimension(90, 65));
+    JButton but17 = new JButton (image17);
+    but17.setPreferredSize(new Dimension (90,60));
     but17.addActionListener(new ActionActinides());
     cell17.add(but17);
     
     //quatriÃ¨me colonne
     
     JPanel cell18 = new JPanel();
-    cell18.setPreferredSize(new Dimension(150, 75));
-    JButton but18 = new JButton ("Ti");
-    but18.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture18 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Ti.png"));
+	ImageIcon image18 = new ImageIcon(myPicture18);
+    cell18.setPreferredSize(new Dimension(50, 65));
+    JButton but18 = new JButton (image18);
+    but18.setPreferredSize(new Dimension (50,60));
     but18.addActionListener(new ActionTitane());
     cell18.add(but18);
     
     JPanel cell19 = new JPanel();
-    cell19.setPreferredSize(new Dimension(150, 75));
-    JButton but19 = new JButton ("Zr");
-    but19.setPreferredSize(new Dimension (100,35));
-    but18.addActionListener(new ActionZirconcium());
+    BufferedImage myPicture19 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Zr.png"));
+	ImageIcon image19 = new ImageIcon(myPicture19);
+    cell19.setPreferredSize(new Dimension(50, 65));
+    JButton but19 = new JButton (image19);
+    but19.setPreferredSize(new Dimension (50,60));
+    but19.addActionListener(new ActionZirconcium());
     cell19.add(but19);
     
     JPanel cell20 = new JPanel();
-    cell20.setPreferredSize(new Dimension(150, 75));
-    JButton but20 = new JButton ("Hf");
-    but20.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture20 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Hf.png"));
+	ImageIcon image20 = new ImageIcon(myPicture20);
+    cell20.setPreferredSize(new Dimension(50, 65));
+    JButton but20 = new JButton (image20);
+    but20.setPreferredSize(new Dimension (50,60));
     but20.addActionListener(new ActionHafnium());
     cell20.add(but20);
     
     JPanel cell21 = new JPanel();
-    cell21.setPreferredSize(new Dimension(150, 75));
-    JButton but21 = new JButton ("Rf");
-    but21.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture21 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Rf.png"));
+	ImageIcon image21 = new ImageIcon(myPicture21);
+    cell21.setPreferredSize(new Dimension(50, 65));
+    JButton but21 = new JButton (image21);
+    but21.setPreferredSize(new Dimension (50,60));
     but21.addActionListener(new ActionRutherfordium());
     cell21.add(but21);
     
     // cinquiÃ¨me colonne
     
     JPanel cell22 = new JPanel();
-    cell22.setPreferredSize(new Dimension(150, 75));
-    JButton but22 = new JButton ("V");
-    but22.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture22 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/V.png"));
+	ImageIcon image22 = new ImageIcon(myPicture22);
+    cell22.setPreferredSize(new Dimension(50, 65));
+    JButton but22 = new JButton (image22);
+    but22.setPreferredSize(new Dimension (50,60));
     but22.addActionListener(new ActionVanadium());
     cell22.add(but22);
     
     JPanel cell23 = new JPanel();
-    cell23.setPreferredSize(new Dimension(150, 75));
-    JButton but23 = new JButton ("Nb");
-    but23.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture23 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Nb.png"));
+	ImageIcon image23 = new ImageIcon(myPicture23);
+    cell23.setPreferredSize(new Dimension(50, 65));
+    JButton but23 = new JButton (image23);
+    but23.setPreferredSize(new Dimension (50,60));
     but23.addActionListener(new ActionNobium());
     cell23.add(but23);
     
     JPanel cell24 = new JPanel();
-    cell24.setPreferredSize(new Dimension(150, 75));
-    JButton but24 = new JButton ("Ta");
-    but24.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture24 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Ta.png"));
+	ImageIcon image24 = new ImageIcon(myPicture24);
+    cell24.setPreferredSize(new Dimension(50, 65));
+    JButton but24 = new JButton (image24);
+    but24.setPreferredSize(new Dimension (50,60));
     but24.addActionListener(new ActionTantale());
     cell24.add(but24);
     
     JPanel cell25 = new JPanel();
-    cell25.setPreferredSize(new Dimension(150, 75));
-    JButton but25 = new JButton ("Db");
-    but25.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture25 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Db.png"));
+	ImageIcon image25 = new ImageIcon(myPicture25);
+    cell25.setPreferredSize(new Dimension(50, 65));
+    JButton but25 = new JButton (image25);
+    but25.setPreferredSize(new Dimension (50,60));
     but25.addActionListener(new ActionDubnium());
     cell25.add(but25);
     
     // sixiÃ¨me colonne
     
     JPanel cell26 = new JPanel();
-    cell26.setPreferredSize(new Dimension(150, 75));
-    JButton but26 = new JButton ("Cr");
-    but26.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture26 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Cr.png"));
+	ImageIcon image26 = new ImageIcon(myPicture26);
+    cell26.setPreferredSize(new Dimension(50, 65));
+    JButton but26 = new JButton (image26);
+    but26.setPreferredSize(new Dimension (50,60));
     but26.addActionListener(new ActionChrome());
     cell26.add(but26);
     
     JPanel cell27 = new JPanel();
-    cell27.setPreferredSize(new Dimension(150, 75));
-    JButton but27 = new JButton ("Mo");
-    but27.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture27 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Mo.png"));
+	ImageIcon image27 = new ImageIcon(myPicture27);
+    cell27.setPreferredSize(new Dimension(50, 65));
+    JButton but27 = new JButton (image27);
+    but27.setPreferredSize(new Dimension (50,60));
     but27.addActionListener(new ActionMolibdène());
     cell27.add(but27);
     
     JPanel cell28 = new JPanel();
-    cell28.setPreferredSize(new Dimension(150, 75));
-    JButton but28 = new JButton ("W");
-    but28.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture28 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/W.png"));
+	ImageIcon image28 = new ImageIcon(myPicture28);
+    cell28.setPreferredSize(new Dimension(50, 65));
+    JButton but28 = new JButton (image28);
+    but28.setPreferredSize(new Dimension (50,60));
     but28.addActionListener(new ActionTungstène());
     cell28.add(but28);
     
     JPanel cell29 = new JPanel();
-    cell29.setPreferredSize(new Dimension(150, 75));
-    JButton but29 = new JButton ("Sg");
-    but29.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture29 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Sg.png"));
+	ImageIcon image29 = new ImageIcon(myPicture29);
+    cell29.setPreferredSize(new Dimension(50, 65));
+    JButton but29 = new JButton (image29);
+    but29.setPreferredSize(new Dimension (50,60));
     but29.addActionListener(new ActionSeaborgium());
     cell29.add(but29);
     
     // septiÃ¨me colonne
     
     JPanel cell30 = new JPanel();
-    cell30.setPreferredSize(new Dimension(150, 75));
-    JButton but30 = new JButton ("Mn");
-    but30.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture30 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Mn.png"));
+	ImageIcon image30 = new ImageIcon(myPicture30);
+    cell30.setPreferredSize(new Dimension(50, 65));
+    JButton but30 = new JButton (image30);
+    but30.setPreferredSize(new Dimension (50,60));
     but30.addActionListener(new ActionManganèse());
     cell30.add(but30);
     
     JPanel cell31 = new JPanel();
-    cell31.setPreferredSize(new Dimension(150, 75));
-    JButton but31 = new JButton ("Tc");
-    but31.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture31 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Tc.png"));
+	ImageIcon image31 = new ImageIcon(myPicture31);
+    cell31.setPreferredSize(new Dimension(50, 65));
+    JButton but31 = new JButton (image31);
+    but31.setPreferredSize(new Dimension (50,60));
     but31.addActionListener(new ActionTechténium());
     cell31.add(but31);
     
     JPanel cell32 = new JPanel();
-    cell32.setPreferredSize(new Dimension(150, 75));
-    JButton but32 = new JButton ("Re");
-    but32.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture32 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Re.png"));
+	ImageIcon image32 = new ImageIcon(myPicture32);
+    cell32.setPreferredSize(new Dimension(50, 65));
+    JButton but32 = new JButton (image32);
+    but32.setPreferredSize(new Dimension (50,60));
+    but32.addActionListener(new ActionRénium());
     cell32.add(but32);
     
     JPanel cell33 = new JPanel();
-    cell33.setPreferredSize(new Dimension(150, 75));
-    JButton but33 = new JButton ("Bh");
-    but33.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture33 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Bh.png"));
+	ImageIcon image33 = new ImageIcon(myPicture33);
+    cell33.setPreferredSize(new Dimension(50, 65));
+    JButton but33 = new JButton (image33);
+    but33.setPreferredSize(new Dimension (50,60));
+    but33.addActionListener(new ActionBohrium());
     cell33.add(but33);
+    
     
     //huitiÃ¨me colonne
     
     JPanel cell34 = new JPanel();
-    cell34.setPreferredSize(new Dimension(150, 75));
-    JButton but34 = new JButton ("Fe");
-    but34.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture34 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Fe.png"));
+	ImageIcon image34 = new ImageIcon(myPicture34);
+    cell34.setPreferredSize(new Dimension(50, 65));
+    JButton but34 = new JButton (image34);
+    but34.setPreferredSize(new Dimension (50,60));
+    but34.addActionListener(new AcionFer());
     cell34.add(but34);
     
     JPanel cell35 = new JPanel();
-    cell35.setPreferredSize(new Dimension(150, 75));
-    JButton but35 = new JButton ("Ru");
-    but35.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture35 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Ru.png"));
+	ImageIcon image35 = new ImageIcon(myPicture35);
+    cell35.setPreferredSize(new Dimension(50, 65));
+    JButton but35 = new JButton (image35);
+    but35.setPreferredSize(new Dimension (50,60));
+    but35.addActionListener(new ActionRuthénium());
     cell35.add(but35);
     
     JPanel cell36 = new JPanel();
-    cell36.setPreferredSize(new Dimension(150, 75));
-    JButton but36 = new JButton ("Os");
-    but36.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture36 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Os.png"));
+	ImageIcon image36 = new ImageIcon(myPicture36);
+    cell36.setPreferredSize(new Dimension(50, 65));
+    JButton but36 = new JButton (image36);
+    but36.setPreferredSize(new Dimension (50,60));
+    but36.addActionListener(new ActionOsmium());
     cell36.add(but36);
     
     JPanel cell37 = new JPanel();
-    cell37.setPreferredSize(new Dimension(150, 75));
-    JButton but37 = new JButton ("Hs");
-    but37.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture37 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Hs.png"));
+	ImageIcon image37 = new ImageIcon(myPicture37);
+    cell37.setPreferredSize(new Dimension(50, 65));
+    JButton but37 = new JButton (image37);
+    but37.setPreferredSize(new Dimension (50,60));
+    but37.addActionListener(new ActionHassium());
     cell37.add(but37);
     
     //neuvieme colonnne
     
     JPanel cell38 = new JPanel();
-    cell38.setPreferredSize(new Dimension(150, 75));
-    JButton but38 = new JButton ("Co");
-    but38.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture38 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Co.png"));
+	ImageIcon image38 = new ImageIcon(myPicture38);
+    cell38.setPreferredSize(new Dimension(50, 65));
+    JButton but38 = new JButton (image38);
+    but38.setPreferredSize(new Dimension (50,60));
+    but38.addActionListener(new ActionCobalt());
     cell38.add(but38);
     
     JPanel cell39 = new JPanel();
-    cell39.setPreferredSize(new Dimension(150, 75));
-    JButton but39 = new JButton ("Rh");
-    but39.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture39 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Rh.png"));
+	ImageIcon image39 = new ImageIcon(myPicture39);
+    cell39.setPreferredSize(new Dimension(50, 65));
+    JButton but39 = new JButton (image39);
+    but39.setPreferredSize(new Dimension (50,60));
+    but39.addActionListener(new ActionRhodium());
     cell39.add(but39);
     
     JPanel cell40 = new JPanel();
-    cell40.setPreferredSize(new Dimension(150, 75));
-    JButton but40 = new JButton ("Ir");
-    but40.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture40 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Ir.png"));
+	ImageIcon image40 = new ImageIcon(myPicture40);
+    cell40.setPreferredSize(new Dimension(50, 65));
+    JButton but40 = new JButton (image40);
+    but40.setPreferredSize(new Dimension (50,60));
+    but40.addActionListener(new ActionIridium());
     cell40.add(but40);
     
     JPanel cell41 = new JPanel();
-    cell41.setPreferredSize(new Dimension(150, 75));
-    JButton but41 = new JButton ("Mt");
-    but41.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture41 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Mt.png"));
+	ImageIcon image41 = new ImageIcon(myPicture41);
+    cell41.setPreferredSize(new Dimension(50, 65));
+    JButton but41 = new JButton (image41);
+    but41.setPreferredSize(new Dimension (50,60));
+    but41.addActionListener(new ActionMeitnérium());
     cell41.add(but41);
     
     //dixiÃ¨me colonnne
     
     JPanel cell42 = new JPanel();
-    cell42.setPreferredSize(new Dimension(150, 75));
-    JButton but42 = new JButton ("Ni");
-    but42.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture42 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Ni.png"));
+	ImageIcon image42 = new ImageIcon(myPicture42);
+    cell42.setPreferredSize(new Dimension(50, 65));
+    JButton but42 = new JButton (image42);
+    but42.setPreferredSize(new Dimension (50,60));
+    but42.addActionListener(new ActionNickel());
     cell42.add(but42);
     
     JPanel cell43 = new JPanel();
-    cell43.setPreferredSize(new Dimension(150, 75));
-    JButton but43 = new JButton ("Pd");
-    but43.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture43 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Pd.png"));
+	ImageIcon image43 = new ImageIcon(myPicture43);
+    cell43.setPreferredSize(new Dimension(50, 65));
+    JButton but43 = new JButton (image43);
+    but43.setPreferredSize(new Dimension (50,60));
+    but43.addActionListener(new ActionPalladium());
     cell43.add(but43);
     
     JPanel cell44 = new JPanel();
-    cell44.setPreferredSize(new Dimension(150, 75));
-    JButton but44 = new JButton ("Pt");
-    but44.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture44 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Pt.png"));
+	ImageIcon image44 = new ImageIcon(myPicture44);
+    cell44.setPreferredSize(new Dimension(50, 65));
+    JButton but44 = new JButton (image44);
+    but44.setPreferredSize(new Dimension (50,60));
+    but44.addActionListener(new ActionPlatine());
     cell44.add(but44);
     
     JPanel cell45 = new JPanel();
-    cell45.setPreferredSize(new Dimension(150, 75));
-    JButton but45 = new JButton ("Ds");
-    but45.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture45 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Ds.png"));
+	ImageIcon image45 = new ImageIcon(myPicture45);
+    cell45.setPreferredSize(new Dimension(50, 65));
+    JButton but45 = new JButton (image45);
+    but45.setPreferredSize(new Dimension (50,60));
+    but45.addActionListener(new ActionDarmstadium());
     cell45.add(but45);
     
     // onziÃ¨me colonne
     
     JPanel cell46 = new JPanel();
-    cell46.setPreferredSize(new Dimension(150, 75));
-    JButton but46 = new JButton ("Cu");
-    but46.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture46 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Cu.png"));
+	ImageIcon image46 = new ImageIcon(myPicture46);
+    cell46.setPreferredSize(new Dimension(50, 65));
+    JButton but46 = new JButton (image46);
+    but46.setPreferredSize(new Dimension (50,60));
+    but46.addActionListener(new ActionCuivre());
     cell46.add(but46);
     
     JPanel cell47 = new JPanel();
-    cell47.setPreferredSize(new Dimension(150, 75));
-    JButton but47 = new JButton ("Ag");
-    but47.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture47 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Ag.png"));
+	ImageIcon image47 = new ImageIcon(myPicture47);
+    cell47.setPreferredSize(new Dimension(50, 65));
+    JButton but47 = new JButton (image47);
+    but47.setPreferredSize(new Dimension (50,60));
+    but47.addActionListener(new ActionArgent());
     cell47.add(but47);
     
     JPanel cell48 = new JPanel();
-    cell48.setPreferredSize(new Dimension(150, 75));
-    JButton but48 = new JButton ("Au");
-    but48.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture48 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Au.png"));
+	ImageIcon image48 = new ImageIcon(myPicture48);
+    cell48.setPreferredSize(new Dimension(50, 65));
+    JButton but48 = new JButton (image48);
+    but48.setPreferredSize(new Dimension (50,60));
+    but48.addActionListener(new ActionOr());
     cell48.add(but48);
     
     JPanel cell49 = new JPanel();
-    cell49.setPreferredSize(new Dimension(150, 75));
-    JButton but49 = new JButton ("Rg");
-    but49.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture49 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Rg.png"));
+	ImageIcon image49 = new ImageIcon(myPicture49);
+    cell49.setPreferredSize(new Dimension(50, 65));
+    JButton but49 = new JButton (image49);
+    but49.setPreferredSize(new Dimension (50,60));
+    but49.addActionListener(new ActionRoentgenium());
     cell49.add(but49);
     
     //douziÃ¨me colonnne
     
     JPanel cell50 = new JPanel();
-    cell50.setPreferredSize(new Dimension(150, 75));
-    JButton but50 = new JButton ("Zn");
-    but50.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture50 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Zn.png"));
+	ImageIcon image50 = new ImageIcon(myPicture50);
+    cell50.setPreferredSize(new Dimension(50, 65));
+    JButton but50 = new JButton (image50);
+    but50.setPreferredSize(new Dimension (50,60));
+    but50.addActionListener(new ActionZinc());
     cell50.add(but50);
     
     JPanel cell51 = new JPanel();
-    cell51.setPreferredSize(new Dimension(150, 75));
-    JButton but51 = new JButton ("Cd");
-    but51.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture51 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Cd.png"));
+	ImageIcon image51 = new ImageIcon(myPicture51);
+    cell51.setPreferredSize(new Dimension(50, 65));
+    JButton but51 = new JButton (image51);
+    but51.setPreferredSize(new Dimension (50,60));
+    but51.addActionListener(new ActionCadmium());
     cell51.add(but51);
     
     JPanel cell52 = new JPanel();
-    cell52.setPreferredSize(new Dimension(150, 75));
-    JButton but52 = new JButton ("Hg");
-    but52.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture52 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Hg.png"));
+	ImageIcon image52 = new ImageIcon(myPicture52);
+    cell52.setPreferredSize(new Dimension(50, 65));
+    JButton but52 = new JButton (image52);
+    but52.setPreferredSize(new Dimension (50,60));
+    but52.addActionListener(new ActionMercure());
     cell52.add(but52);
     
     JPanel cell53 = new JPanel();
-    cell53.setPreferredSize(new Dimension(150, 75));
-    JButton but53 = new JButton ("Cn");
-    but53.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture53 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Cn.png"));
+	ImageIcon image53 = new ImageIcon(myPicture53);
+    cell53.setPreferredSize(new Dimension(50, 65));
+    JButton but53 = new JButton (image53);
+    but53.setPreferredSize(new Dimension (50,60));
+    but53.addActionListener(new ActionCopernicium());
     cell53.add(but53);
     
     //trezième colonne
     JPanel cell54 = new JPanel();
-    cell54.setPreferredSize(new Dimension(150, 75));
-    JButton but54 = new JButton ("B");
-    but54.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture54 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/B.png"));
+	ImageIcon image54 = new ImageIcon(myPicture54);
+    cell54.setPreferredSize(new Dimension(50, 65));
+    JButton but54 = new JButton (image54);
+    but54.setPreferredSize(new Dimension (50,60));
+    but54.addActionListener(new ActionBore());
     cell54.add(but54);
     
     JPanel cell55 = new JPanel();
-    cell55.setPreferredSize(new Dimension(150, 75));
-    JButton but55 = new JButton ("Al");
-    but55.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture55 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Al.png"));
+	ImageIcon image55 = new ImageIcon(myPicture55);
+    cell55.setPreferredSize(new Dimension(50, 65));
+    JButton but55 = new JButton (image55);
+    but55.setPreferredSize(new Dimension (50,60));
+    but55.addActionListener(new ActionAluminium());
     cell55.add(but55);
     
     JPanel cell56 = new JPanel();
-    cell56.setPreferredSize(new Dimension(150, 75));
-    JButton but56 = new JButton ("Ga");
-    but56.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture56 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Ga.png"));
+	ImageIcon image56 = new ImageIcon(myPicture56);
+    cell56.setPreferredSize(new Dimension(50, 65));
+    JButton but56 = new JButton (image56);
+    but56.setPreferredSize(new Dimension (50,60));
+    but56.addActionListener(new ActionGallium());
     cell56.add(but56);
     
     JPanel cell57 = new JPanel();
-    cell57.setPreferredSize(new Dimension(150, 75));
-    JButton but57 = new JButton ("In");
-    but57.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture57 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/In.png"));
+	ImageIcon image57 = new ImageIcon(myPicture57);
+    cell57.setPreferredSize(new Dimension(50, 65));
+    JButton but57 = new JButton (image57);
+    but57.setPreferredSize(new Dimension (50,60));
+    but57.addActionListener(new ActionIndium());
     cell57.add(but57);
     
     JPanel cell58 = new JPanel();
-    cell58.setPreferredSize(new Dimension(150, 75));
-    JButton but58 = new JButton ("Tl");
-    but58.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture58 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Tl.png"));
+	ImageIcon image58 = new ImageIcon(myPicture58);
+    cell58.setPreferredSize(new Dimension(50, 65));
+    JButton but58 = new JButton (image58);
+    but58.setPreferredSize(new Dimension (50,60));
+    but58.addActionListener(new ActionThalium());
     cell58.add(but58);
     
     JPanel cell59 = new JPanel();
-    cell59.setPreferredSize(new Dimension(150, 75));
-    JButton but59 = new JButton ("Nh");
-    but59.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture59 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Nh.png"));
+	ImageIcon image59 = new ImageIcon(myPicture59);
+    cell59.setPreferredSize(new Dimension(50, 65));
+    JButton but59 = new JButton (image59);
+    but59.setPreferredSize(new Dimension (50,60));
+    but59.addActionListener(new ActionNihonium());
     cell59.add(but59);
     
     // Quatorzième colonne
     JPanel cell60 = new JPanel();
-    cell60.setPreferredSize(new Dimension(150, 75));
-    JButton but60 = new JButton ("C");
-    but60.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture60 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/C.png"));
+	ImageIcon image60 = new ImageIcon(myPicture60);
+    cell60.setPreferredSize(new Dimension(50, 65));
+    JButton but60 = new JButton (image60);
+    but60.setPreferredSize(new Dimension (50,60));
+    but60.addActionListener(new ActionCarbone());
     cell60.add(but60);
     
     JPanel cell61 = new JPanel();
-    cell61.setPreferredSize(new Dimension(150, 75));
-    JButton but61 = new JButton ("Si");
-    but61.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture61 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Si.png"));
+	ImageIcon image61 = new ImageIcon(myPicture61);
+    cell61.setPreferredSize(new Dimension(50, 65));
+    JButton but61 = new JButton (image61);
+    but61.setPreferredSize(new Dimension (50,60));
+    but61.addActionListener(new ActionSilicium());
     cell61.add(but61);
     
     JPanel cell62 = new JPanel();
-    cell62.setPreferredSize(new Dimension(150, 75));
-    JButton but62 = new JButton ("Ge");
-    but62.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture62 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Ge.png"));
+	ImageIcon image62 = new ImageIcon(myPicture62);
+    cell62.setPreferredSize(new Dimension(50, 65));
+    JButton but62 = new JButton (image62);
+    but62.setPreferredSize(new Dimension (50,60));
+    but62.addActionListener(new ActionGermanium());
     cell62.add(but62);
     
     JPanel cell63 = new JPanel();
-    cell63.setPreferredSize(new Dimension(150, 75));
-    JButton but63 = new JButton ("Sn");
-    but63.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture63 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Sn.png"));
+	ImageIcon image63 = new ImageIcon(myPicture63);
+    cell63.setPreferredSize(new Dimension(50, 65));
+    JButton but63 = new JButton (image63);
+    but63.setPreferredSize(new Dimension (50,60));
+    but63.addActionListener(new ActionEtain());
     cell63.add(but63);
     
     JPanel cell64 = new JPanel();
-    cell64.setPreferredSize(new Dimension(150, 75));
-    JButton but64 = new JButton ("Pb");
-    but64.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture64 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Pb.png"));
+	ImageIcon image64 = new ImageIcon(myPicture64);
+    cell64.setPreferredSize(new Dimension(50, 65));
+    JButton but64 = new JButton (image64);
+    but64.setPreferredSize(new Dimension (50,60));
+    but64.addActionListener(new ActionPlomb());
     cell64.add(but64);
     
     JPanel cell65 = new JPanel();
-    cell65.setPreferredSize(new Dimension(150, 75));
-    JButton but65 = new JButton ("Fl");
-    but65.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture65 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Fl.png"));
+	ImageIcon image65 = new ImageIcon(myPicture65);
+    cell65.setPreferredSize(new Dimension(50, 65));
+    JButton but65 = new JButton (image65);
+    but65.setPreferredSize(new Dimension (50,60));
+    but65.addActionListener(new ActionFlerovium());
     cell65.add(but65);
     
     //Quinzième colonne
     JPanel cell66 = new JPanel();
-    cell66.setPreferredSize(new Dimension(150, 75));
-    JButton but66 = new JButton ("N");
-    but66.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture66 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/N.png"));
+	ImageIcon image66 = new ImageIcon(myPicture66);
+    cell66.setPreferredSize(new Dimension(50, 65));
+    JButton but66 = new JButton (image66);
+    but66.setPreferredSize(new Dimension (50,60));
+    but66.addActionListener(new ActionAzote());
     cell66.add(but66);
     
     JPanel cell67 = new JPanel();
-    cell67.setPreferredSize(new Dimension(150, 75));
-    JButton but67 = new JButton ("P");
-    but67.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture67 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/P.png"));
+	ImageIcon image67 = new ImageIcon(myPicture67);
+    cell67.setPreferredSize(new Dimension(50, 65));
+    JButton but67 = new JButton (image67);
+    but67.setPreferredSize(new Dimension (50,60));
+    but67.addActionListener(new ActionPhosphore());
     cell67.add(but67);
     
     JPanel cell68 = new JPanel();
-    cell68.setPreferredSize(new Dimension(150, 75));
-    JButton but68 = new JButton ("As");
-    but68.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture68 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/As.png"));
+	ImageIcon image68 = new ImageIcon(myPicture68);
+    cell68.setPreferredSize(new Dimension(50, 65));
+    JButton but68 = new JButton (image68);
+    but68.setPreferredSize(new Dimension (50,60));
+    but68.addActionListener(new ActionArsenic());
     cell68.add(but68);
     
     JPanel cell69 = new JPanel();
-    cell69.setPreferredSize(new Dimension(150, 75));
-    JButton but69 = new JButton ("Sb");
-    but69.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture69 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Sb.png"));
+	ImageIcon image69 = new ImageIcon(myPicture69);
+    cell69.setPreferredSize(new Dimension(50, 65));
+    JButton but69 = new JButton (image69);
+    but69.setPreferredSize(new Dimension (50,60));
+    but69.addActionListener(new ActionAntimoine());
     cell69.add(but69);
     
     JPanel cell70 = new JPanel();
-    cell70.setPreferredSize(new Dimension(150, 75));
-    JButton but70 = new JButton ("Bi");
-    but70.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture70 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Bi.png"));
+	ImageIcon image70 = new ImageIcon(myPicture70);
+    cell70.setPreferredSize(new Dimension(50, 65));
+    JButton but70 = new JButton (image70);
+    but70.setPreferredSize(new Dimension (50,60));
+    but70.addActionListener(new ActionBismuth());
     cell70.add(but70);
     
     JPanel cell71 = new JPanel();
-    cell71.setPreferredSize(new Dimension(150, 75));
-    JButton but71 = new JButton ("Mc");
-    but71.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture71 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Mc.png"));
+	ImageIcon image71 = new ImageIcon(myPicture71);
+    cell71.setPreferredSize(new Dimension(50, 65));
+    JButton but71 = new JButton (image71);
+    but71.setPreferredSize(new Dimension (50,60));
+    but71.addActionListener(new ActionMoscovium());
     cell71.add(but71);
     
   //sezième colonne
     JPanel cell72 = new JPanel();
-    cell72.setPreferredSize(new Dimension(150, 75));
-    JButton but72 = new JButton ("O");
-    but72.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture72 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/O.png"));
+	ImageIcon image72 = new ImageIcon(myPicture72);
+    cell72.setPreferredSize(new Dimension(50, 65));
+    JButton but72 = new JButton (image72);
+    but72.setPreferredSize(new Dimension (50,60));
+    but72.addActionListener(new ActionOxygène());
     cell72.add(but72);
     
     JPanel cell73 = new JPanel();
-    cell73.setPreferredSize(new Dimension(150, 75));
-    JButton but73 = new JButton ("S");
-    but73.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture73 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/S.png"));
+	ImageIcon image73 = new ImageIcon(myPicture73);
+    cell73.setPreferredSize(new Dimension(50, 65));
+    JButton but73 = new JButton (image73);
+    but73.setPreferredSize(new Dimension (50,60));
+    but73.addActionListener(new ActionSoufre());
     cell73.add(but73);
     
     JPanel cell74 = new JPanel();
-    cell74.setPreferredSize(new Dimension(150, 75));
-    JButton but74 = new JButton ("Se");
-    but74.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture74 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Se.png"));
+	ImageIcon image74 = new ImageIcon(myPicture74);
+    cell74.setPreferredSize(new Dimension(50, 65));
+    JButton but74 = new JButton (image74);
+    but74.setPreferredSize(new Dimension (50,60));
+    but74.addActionListener(new ActionSélénium());
     cell74.add(but74);
     
     JPanel cell75 = new JPanel();
-    cell75.setPreferredSize(new Dimension(150, 75));
-    JButton but75 = new JButton ("Te");
-    but75.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture75 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Te.png"));
+	ImageIcon image75 = new ImageIcon(myPicture75);
+    cell75.setPreferredSize(new Dimension(50, 65));
+    JButton but75 = new JButton (image75);
+    but75.setPreferredSize(new Dimension (50,60));
+    but75.addActionListener(new ActionTellure());
     cell75.add(but75);
     
     JPanel cell76 = new JPanel();
-    cell76.setPreferredSize(new Dimension(150, 75));
-    JButton but76 = new JButton ("Po");
-    but76.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture76 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Po.png"));
+	ImageIcon image76 = new ImageIcon(myPicture76);
+    cell76.setPreferredSize(new Dimension(50, 65));
+    JButton but76 = new JButton (image76);
+    but76.setPreferredSize(new Dimension (50,60));
+    but76.addActionListener(new ActionPolonium());
     cell76.add(but76);
     
     JPanel cell77 = new JPanel();
-    cell77.setPreferredSize(new Dimension(150, 75));
-    JButton but77 = new JButton ("Lv");
-    but77.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture77 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Lv.png"));
+	ImageIcon image77 = new ImageIcon(myPicture77);
+    cell77.setPreferredSize(new Dimension(50, 65));
+    JButton but77 = new JButton (image77);
+    but77.setPreferredSize(new Dimension (50,60));
+    but77.addActionListener(new ActionLivermorium());
     cell77.add(but77);
     
   //17 colonne
     JPanel cell78 = new JPanel();
-    cell78.setPreferredSize(new Dimension(150, 75));
-    JButton but78 = new JButton ("F");
-    but78.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture78 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/F.png"));
+	ImageIcon image78 = new ImageIcon(myPicture78);
+    cell78.setPreferredSize(new Dimension(50, 65));
+    JButton but78 = new JButton (image78);
+    but78.setPreferredSize(new Dimension (50,60));
+    but78.addActionListener(new ActionFluor());
     cell78.add(but78);
     
     JPanel cell79 = new JPanel();
-    cell79.setPreferredSize(new Dimension(150, 75));
-    JButton but79 = new JButton ("Cl");
-    but79.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture79 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Cl.png"));
+	ImageIcon image79 = new ImageIcon(myPicture79);
+    cell79.setPreferredSize(new Dimension(50, 65));
+    JButton but79 = new JButton (image79);
+    but79.setPreferredSize(new Dimension (50,60));
+    but79.addActionListener(new ActionChlore());
     cell79.add(but79);
     
     JPanel cell80 = new JPanel();
-    cell80.setPreferredSize(new Dimension(150, 75));
-    JButton but80 = new JButton ("Br");
-    but80.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture80 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Br.png"));
+	ImageIcon image80 = new ImageIcon(myPicture80);
+    cell80.setPreferredSize(new Dimension(50, 65));
+    JButton but80 = new JButton (image80);
+    but80.setPreferredSize(new Dimension (50,60));
+    but80.addActionListener(new ActionBrome());
     cell80.add(but80);
     
     JPanel cell81 = new JPanel();
-    cell81.setPreferredSize(new Dimension(150, 75));
-    JButton but81 = new JButton ("I");
-    but81.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture81 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/I.png"));
+	ImageIcon image81 = new ImageIcon(myPicture81);
+    cell81.setPreferredSize(new Dimension(50, 65));
+    JButton but81 = new JButton (image81);
+    but81.setPreferredSize(new Dimension (50,60));
+    but81.addActionListener(new ActionIode());
     cell81.add(but81);
     
     JPanel cell82 = new JPanel();
-    cell82.setPreferredSize(new Dimension(150, 75));
-    JButton but82 = new JButton ("At");
-    but82.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture82 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/At.png"));
+	ImageIcon image82 = new ImageIcon(myPicture82);
+    cell82.setPreferredSize(new Dimension(50, 65));
+    JButton but82 = new JButton (image82);
+    but82.setPreferredSize(new Dimension (50,60));
+    but82.addActionListener(new ActionAstate());
     cell82.add(but82);
     
     JPanel cell83 = new JPanel();
-    cell83.setPreferredSize(new Dimension(150, 75));
-    JButton but83 = new JButton ("Ts");
-    but83.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture83 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Ts.png"));
+	ImageIcon image83 = new ImageIcon(myPicture83);
+    cell83.setPreferredSize(new Dimension(50, 65));
+    JButton but83 = new JButton (image83);
+    but83.setPreferredSize(new Dimension (50,60));
+    but83.addActionListener(new ActionTennesse());
     cell83.add(but83);
     
   //18 colonne
     JPanel cell84 = new JPanel();
-    cell84.setPreferredSize(new Dimension(150, 75));
-    JButton but84 = new JButton ("He");
-    but84.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture84 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/He.png"));
+	ImageIcon image84 = new ImageIcon(myPicture84);
+    cell84.setPreferredSize(new Dimension(50, 65));
+    JButton but84 = new JButton (image84);
+    but84.setPreferredSize(new Dimension (50,60));
+    but83.addActionListener(new ActionHélium());
     cell84.add(but84);
     
     JPanel cell85 = new JPanel();
-    cell85.setPreferredSize(new Dimension(150, 75));
-    JButton but85 = new JButton ("Ne");
-    but85.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture85 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Ne.png"));
+	ImageIcon image85 = new ImageIcon(myPicture85);
+    cell85.setPreferredSize(new Dimension(50, 65));
+    JButton but85 = new JButton (image85);
+    but85.setPreferredSize(new Dimension (50,60));
+    but85.addActionListener(new ActionNéon());
     cell85.add(but85);
     
     JPanel cell86 = new JPanel();
-    cell86.setPreferredSize(new Dimension(150, 75));
-    JButton but86 = new JButton ("Ar");
-    but86.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture86 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Ar.png"));
+	ImageIcon image86 = new ImageIcon(myPicture86);
+    cell86.setPreferredSize(new Dimension(50, 65));
+    JButton but86 = new JButton (image86);
+    but86.setPreferredSize(new Dimension (50,60));
+    but86.addActionListener(new ActionArgon());
     cell86.add(but86);
     
     JPanel cell87 = new JPanel();
-    cell87.setPreferredSize(new Dimension(150, 75));
-    JButton but87 = new JButton ("Kr");
-    but87.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture87 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Kr.png"));
+	ImageIcon image87 = new ImageIcon(myPicture87);
+    cell87.setPreferredSize(new Dimension(50, 65));
+    JButton but87 = new JButton (image87);
+    but87.setPreferredSize(new Dimension (50,60));
+    but87.addActionListener(new ActionKrypton());
     cell87.add(but87);
     
     JPanel cell88 = new JPanel();
-    cell88.setPreferredSize(new Dimension(150, 75));
-    JButton but88 = new JButton ("Xe");
-    but88.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture88 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Xe.png"));
+	ImageIcon image88 = new ImageIcon(myPicture88);
+    cell88.setPreferredSize(new Dimension(50, 65));
+    JButton but88 = new JButton (image88);
+    but88.setPreferredSize(new Dimension (50,60));
+    but88.addActionListener(new ActionXénon());
     cell88.add(but88);
     
     JPanel cell89 = new JPanel();
-    cell89.setPreferredSize(new Dimension(150, 75));
-    JButton but89 = new JButton ("Rn");
-    but89.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture89 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Rn.png"));
+	ImageIcon image89 = new ImageIcon(myPicture89);
+    cell89.setPreferredSize(new Dimension(50, 65));
+    JButton but89 = new JButton (image89);
+    but89.setPreferredSize(new Dimension (50,60));
+    but89.addActionListener(new ActionRadon());
     cell89.add(but89);
     
     JPanel cell90 = new JPanel();
-    cell90.setPreferredSize(new Dimension(150, 75));
-    JButton but90 = new JButton ("Og");
-    but90.setPreferredSize(new Dimension (100,35));
+    BufferedImage myPicture90 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Og.png"));
+	ImageIcon image90 = new ImageIcon(myPicture90);
+    cell90.setPreferredSize(new Dimension(50, 65));
+    JButton but90 = new JButton (image90);
+    but90.setPreferredSize(new Dimension (50,60));
+    but90.addActionListener(new ActionOganesson());
     cell90.add(but90);
 
-    /***
     // Avant dernière ligne
     JPanel cell91 = new JPanel();
-    cell91.setPreferredSize(new Dimension(150,75));
-    JButton but91 = new JButton ("La");
-    but91.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture91 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/La.png"));
+	ImageIcon image91 = new ImageIcon(myPicture91);
+    cell91.setPreferredSize(new Dimension(50,65));
+    JButton but91 = new JButton (image91);
+    but91.setPreferredSize(new Dimension(50,60));
     cell91.add(but91);
    
     JPanel cell92 = new JPanel();
-    cell92.setPreferredSize(new Dimension(150,75));
-    JButton but92 = new JButton ("Ce");
-    but92.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture92 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Ce.png"));
+	ImageIcon image92 = new ImageIcon(myPicture92);
+    cell92.setPreferredSize(new Dimension(50,65));
+    JButton but92 = new JButton (image92);
+    but92.setPreferredSize(new Dimension(50,60));
     cell92.add(but92);
     
     JPanel cell93 = new JPanel();
-    cell93.setPreferredSize(new Dimension(150,75));
-    JButton but93 = new JButton ("Pr");
-    but93.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture93 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Pr.png"));
+	ImageIcon image93 = new ImageIcon(myPicture93);
+    cell93.setPreferredSize(new Dimension(50,65));
+    JButton but93 = new JButton (image93);
+    but93.setPreferredSize(new Dimension(50,60));
     cell93.add(but93);
     
     JPanel cell94 = new JPanel();
-    cell94.setPreferredSize(new Dimension(150,75));
-    JButton but94 = new JButton ("Nd");
-    but94.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture94 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Nd.png"));
+	ImageIcon image94 = new ImageIcon(myPicture94);
+    cell94.setPreferredSize(new Dimension(50,65));
+    JButton but94 = new JButton (image94);
+    but94.setPreferredSize(new Dimension(50,60));
     cell94.add(but94);
     
     JPanel cell95 = new JPanel();
-    cell95.setPreferredSize(new Dimension(150,75));
-    JButton but95 = new JButton ("Pm");
-    but95.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture95 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Pm.png"));
+	ImageIcon image95 = new ImageIcon(myPicture95);
+    cell95.setPreferredSize(new Dimension(50,65));
+    JButton but95 = new JButton (image95);
+    but95.setPreferredSize(new Dimension(50,60));
     cell95.add(but95);
     
     JPanel cell96 = new JPanel();
-    cell96.setPreferredSize(new Dimension(150,75));
-    JButton but96 = new JButton ("Sm");
-    but96.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture96 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Sm.png"));
+	ImageIcon image96 = new ImageIcon(myPicture96);
+    cell96.setPreferredSize(new Dimension(50,65));
+    JButton but96 = new JButton (image96);
+    but96.setPreferredSize(new Dimension(50,60));
     cell96.add(but96);
     
     JPanel cell97 = new JPanel();
-    cell97.setPreferredSize(new Dimension(150,75));
-    JButton but97 = new JButton ("Eu");
-    but91.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture97 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Eu.png"));
+	ImageIcon image97 = new ImageIcon(myPicture97);
+    cell97.setPreferredSize(new Dimension(50,65));
+    JButton but97 = new JButton (image97);
+    but97.setPreferredSize(new Dimension(50,60));
     cell97.add(but97);
     
     JPanel cell98 = new JPanel();
-    cell98.setPreferredSize(new Dimension(150,75));
-    JButton but98 = new JButton ("Gd");
-    but98.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture98 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Gd.png"));
+	ImageIcon image98 = new ImageIcon(myPicture98);
+    cell98.setPreferredSize(new Dimension(50,65));
+    JButton but98 = new JButton (image98);
+    but98.setPreferredSize(new Dimension(50,60));
     cell98.add(but98);
     
     JPanel cell99 = new JPanel();
-    cell99.setPreferredSize(new Dimension(150,75));
-    JButton but99 = new JButton ("Tb");
-    but99.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture99 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Tb.png"));
+	ImageIcon image99 = new ImageIcon(myPicture99);
+    cell99.setPreferredSize(new Dimension(50,65));
+    JButton but99 = new JButton (image99);
+    but99.setPreferredSize(new Dimension(50,60));
     cell99.add(but99);
     
     JPanel cell100 = new JPanel();
-    cell100.setPreferredSize(new Dimension(150,75));
-    JButton but100 = new JButton ("Dy");
-    but100.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture100 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Dy.png"));
+	ImageIcon image100 = new ImageIcon(myPicture100);
+    cell100.setPreferredSize(new Dimension(50,65));
+    JButton but100 = new JButton (image100);
+    but100.setPreferredSize(new Dimension(50,60));
     cell100.add(but100);
     
     JPanel cell101 = new JPanel();
-    cell101.setPreferredSize(new Dimension(150,75));
-    JButton but101 = new JButton ("Ho");
-    but101.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture101 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Ho.png"));
+	ImageIcon image101 = new ImageIcon(myPicture101);
+    cell101.setPreferredSize(new Dimension(50,65));
+    JButton but101 = new JButton (image101);
+    but101.setPreferredSize(new Dimension(50,60));
     cell101.add(but101);
     
     JPanel cell102 = new JPanel();
-    cell102.setPreferredSize(new Dimension(150,75));
-    JButton but102 = new JButton ("Er");
-    but102.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture102 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Er.png"));
+	ImageIcon image102 = new ImageIcon(myPicture102);
+    cell102.setPreferredSize(new Dimension(50,65));
+    JButton but102 = new JButton (image102);
+    but102.setPreferredSize(new Dimension(50,60));
     cell102.add(but102);
     
     JPanel cell103 = new JPanel();
-    cell103.setPreferredSize(new Dimension(150,75));
-    JButton but103 = new JButton ("Tm");
-    but103.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture103 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Tm.png"));
+	ImageIcon image103 = new ImageIcon(myPicture103);
+    cell103.setPreferredSize(new Dimension(50,65));
+    JButton but103 = new JButton (image103);
+    but103.setPreferredSize(new Dimension(50,60));
     cell103.add(but103);
     
     JPanel cell104 = new JPanel();
-    cell104.setPreferredSize(new Dimension(150,75));
-    JButton but104 = new JButton ("Yb");
-    but104.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture104 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Yb.png"));
+	ImageIcon image104 = new ImageIcon(myPicture104);
+    cell104.setPreferredSize(new Dimension(50,65));
+    JButton but104 = new JButton (image104);
+    but104.setPreferredSize(new Dimension(50,60));
     cell104.add(but104);
     
     JPanel cell105 = new JPanel();
-    cell105.setPreferredSize(new Dimension(150,75));
-    JButton but105 = new JButton ("Lu");
-    but105.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture105 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Lu.png"));
+	ImageIcon image105 = new ImageIcon(myPicture105);
+    cell105.setPreferredSize(new Dimension(50,65));
+    JButton but105 = new JButton (image105);
+    but105.setPreferredSize(new Dimension(50,60));
     cell105.add(but105);
     
  // Dernière ligne
     JPanel cell106 = new JPanel();
-    cell106.setPreferredSize(new Dimension(150,75));
-    JButton but106 = new JButton ("Ac");
-    but106.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture106 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Ac.png"));
+	ImageIcon image106 = new ImageIcon(myPicture10);
+    cell106.setPreferredSize(new Dimension(50,65));
+    JButton but106 = new JButton (image106);
+    but106.setPreferredSize(new Dimension(50,60));
     cell106.add(but106);
    
     JPanel cell107 = new JPanel();
-    cell107.setPreferredSize(new Dimension(150,75));
-    JButton but107 = new JButton ("Th");
-    but107.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture107 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Th.png"));
+	ImageIcon image107 = new ImageIcon(myPicture107);
+    cell107.setPreferredSize(new Dimension(50,65));
+    JButton but107 = new JButton (image107);
+    but107.setPreferredSize(new Dimension(50,60));
     cell107.add(but107);
     
     JPanel cell108 = new JPanel();
-    cell108.setPreferredSize(new Dimension(150,75));
-    JButton but108 = new JButton ("Pa");
-    but108.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture108 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Pa.png"));
+	ImageIcon image108 = new ImageIcon(myPicture108);
+    cell108.setPreferredSize(new Dimension(50,65));
+    JButton but108 = new JButton (image108);
+    but108.setPreferredSize(new Dimension(50,60));
     cell108.add(but108);
     
     JPanel cell109 = new JPanel();
-    cell109.setPreferredSize(new Dimension(150,75));
-    JButton but109 = new JButton ("U");
-    but109.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture109 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/U.png"));
+	ImageIcon image109 = new ImageIcon(myPicture109);
+    cell109.setPreferredSize(new Dimension(50,65));
+    JButton but109 = new JButton (image109);
+    but109.setPreferredSize(new Dimension(50,60));
     cell109.add(but109);
     
     JPanel cell110 = new JPanel();
-    cell110.setPreferredSize(new Dimension(150,75));
-    JButton but110 = new JButton ("Np");
-    but110.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture110 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Np.png"));
+	ImageIcon image110 = new ImageIcon(myPicture110);
+    cell110.setPreferredSize(new Dimension(50,65));
+    JButton but110 = new JButton (image110);
+    but110.setPreferredSize(new Dimension(50,60));
     cell110.add(but110);
     
     JPanel cell111 = new JPanel();
-    cell111.setPreferredSize(new Dimension(150,75));
-    JButton but111 = new JButton ("Pu");
-    but111.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture111 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Pu.png"));
+	ImageIcon image111 = new ImageIcon(myPicture111);
+    cell111.setPreferredSize(new Dimension(50,65));
+    JButton but111 = new JButton (image111);
+    but111.setPreferredSize(new Dimension(50,60));
     cell111.add(but111);
     
     JPanel cell112 = new JPanel();
-    cell112.setPreferredSize(new Dimension(150,75));
-    JButton but112 = new JButton ("Am");
-    but112.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture112 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Am.png"));
+	ImageIcon image112 = new ImageIcon(myPicture112);
+    cell112.setPreferredSize(new Dimension(50,65));
+    JButton but112 = new JButton (image112);
+    but112.setPreferredSize(new Dimension(50,60));
     cell112.add(but112);
     
     JPanel cell113 = new JPanel();
-    cell113.setPreferredSize(new Dimension(150,75));
-    JButton but113 = new JButton ("Cm");
-    but113.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture113 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Cm.png"));
+	ImageIcon image113 = new ImageIcon(myPicture113);
+    cell113.setPreferredSize(new Dimension(50,65));
+    JButton but113 = new JButton (image113);
+    but113.setPreferredSize(new Dimension(50,60));
     cell113.add(but113);
     
     JPanel cell114 = new JPanel();
-    cell114.setPreferredSize(new Dimension(150,75));
-    JButton but114 = new JButton ("Bk");
-    but114.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture114 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Bk.png"));
+	ImageIcon image114 = new ImageIcon(myPicture114);
+    cell114.setPreferredSize(new Dimension(50,65));
+    JButton but114 = new JButton (image114);
+    but114.setPreferredSize(new Dimension(50,60));
     cell114.add(but114);
     
     JPanel cell115 = new JPanel();
-    cell115.setPreferredSize(new Dimension(150,75));
-    JButton but115 = new JButton ("Cf");
-    but115.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture115 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Cf.png"));
+	ImageIcon image115 = new ImageIcon(myPicture115);
+    cell115.setPreferredSize(new Dimension(50,65));
+    JButton but115 = new JButton (image115);
+    but115.setPreferredSize(new Dimension(50,60));
     cell115.add(but115);
     
     JPanel cell116 = new JPanel();
-    cell116.setPreferredSize(new Dimension(150,75));
-    JButton but116 = new JButton ("Es");
-    but116.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture116 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Es.png"));
+	ImageIcon image116 = new ImageIcon(myPicture116);
+    cell116.setPreferredSize(new Dimension(50,65));
+    JButton but116 = new JButton (image116);
+    but116.setPreferredSize(new Dimension(50,60));
     cell116.add(but116);
     
     JPanel cell117 = new JPanel();
-    cell117.setPreferredSize(new Dimension(150,75));
-    JButton but117 = new JButton ("Fm");
-    but117.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture117 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Fm.png"));
+	ImageIcon image117 = new ImageIcon(myPicture117);
+    cell117.setPreferredSize(new Dimension(50,65));
+    JButton but117 = new JButton (image117);
+    but117.setPreferredSize(new Dimension(50,60));
     cell117.add(but117);
     
     JPanel cell118 = new JPanel();
-    cell118.setPreferredSize(new Dimension(150,75));
-    JButton but118 = new JButton ("Md");
-    but118.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture118 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Md.png"));
+	ImageIcon image118 = new ImageIcon(myPicture118);
+    cell118.setPreferredSize(new Dimension(50,65));
+    JButton but118 = new JButton (image118);
+    but118.setPreferredSize(new Dimension(50,60));
     cell118.add(but118);
     
     JPanel cell119 = new JPanel();
-    cell119.setPreferredSize(new Dimension(150,75));
-    JButton but119 = new JButton ("No");
-    but119.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture119 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/No.png"));
+	ImageIcon image119 = new ImageIcon(myPicture119);
+    cell119.setPreferredSize(new Dimension(50,65));
+    JButton but119 = new JButton (image119);
+    but119.setPreferredSize(new Dimension(50,60));
     cell119.add(but119);
     
     JPanel cell120 = new JPanel();
-    cell120.setPreferredSize(new Dimension(150,75));
-    JButton but120 = new JButton ("Lr");
-    but120.setPreferredSize(new Dimension(150,75));
+    BufferedImage myPicture120 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Lr.png"));
+	ImageIcon image120 = new ImageIcon(myPicture120);
+    cell120.setPreferredSize(new Dimension(50,65));
+    JButton but120 = new JButton (image120);
+    but120.setPreferredSize(new Dimension(50,60));
     cell120.add(but120);
     
-    ***/
     
+    JPanel cell = new JPanel();
+    cell.setBackground(Color.WHITE);
     
-    
-    
-    
-    
-		
     //Le conteneur principal
     JPanel content = new JPanel();
     //content.setPreferredSize(new Dimension(10000, 500));
@@ -866,7 +1225,11 @@ public class TableMende extends JFrame{
     //L'objet servant Ã  positionner les composants
     GridBagConstraints gbc = new GridBagConstraints();
 	
-	
+	gbc.gridx=8;
+    gbc.gridy=7;
+    gbc.gridheight = 1;
+    gbc.gridwidth = 1;
+    content.add(cell, gbc);
     //premiÃ¨re colonne
     
     gbc.gridx = 0;
@@ -1537,7 +1900,6 @@ public class TableMende extends JFrame{
     
   //-------------------------------------------------
    
-    /*********
     //Avant dernière ligne
     gbc.gridx = 3;
     gbc.gridy = 9;
@@ -1638,7 +2000,7 @@ public class TableMende extends JFrame{
    //------------------------------------------------- 
     
     gbc.gridx = 17;
-    gbc.gridy = 8;
+    gbc.gridy = 9;
     gbc.gridheight = 1;
     gbc.gridwidth = 1;
     content.add(cell105, gbc);
@@ -1744,12 +2106,11 @@ public class TableMende extends JFrame{
    //------------------------------------------------- 
     
     gbc.gridx = 17;
-    gbc.gridy = 9;
+    gbc.gridy = 10;
     gbc.gridheight = 1;
     gbc.gridwidth = 1;
     content.add(cell120, gbc);
    //------------------------------------------------- 
-    ****/
     
     this.setContentPane(content);    
     this.setVisible(true);		

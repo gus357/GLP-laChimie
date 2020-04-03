@@ -8,6 +8,7 @@ import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -77,8 +78,13 @@ public class Accueil extends JFrame{
 	
 	private class ActionTable implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
-			TableMende u = new TableMende();
-			u.setVisible(true);
+			try {
+				TableMende u = new TableMende();
+				u.setVisible(true);
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 		}
 	}
 	

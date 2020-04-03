@@ -18,9 +18,9 @@ public class ActionZirconcium extends JFrame implements ActionListener {
 		ReadCsv r = new ReadCsv() ;
 		r.ReadCSVAtome(";","tableauPeriodique.csv");
 		Pauli y = new Pauli();
-
 		String i = "zirconium";
 		h.setText(r.recherchenom(i)+"\n"+y.couche(i));
+	
 		this.add(h);
 		this.pack();
 		this.setVisible(true);

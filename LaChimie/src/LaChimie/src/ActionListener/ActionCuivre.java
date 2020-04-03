@@ -9,18 +9,19 @@ import javax.swing.JLabel;
 import Chimie.Pauli;
 import Data.ReadCsv;
 
-public class ActionCésium extends JFrame implements ActionListener {
+public class ActionCuivre extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-JLabel h = new JLabel();
+		// TODO Auto-generated method stub
+		JLabel h = new JLabel();
 		
 		ReadCsv r = new ReadCsv() ;
 		r.ReadCSVAtome(";","tableauPeriodique.csv");
 		Pauli y = new Pauli();
-
-		String i = "césium";
+		String i = "cuivre";
 		h.setText(r.recherchenom(i)+"\n"+y.couche(i));
+	
 		this.add(h);
 		this.pack();
 		this.setVisible(true);

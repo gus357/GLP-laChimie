@@ -2,25 +2,15 @@ package Chimie;
 
 import Data.ReadCsv;
 
-public class Pauli  {
-	private int K;
-	private int L;
-	private int M;
-	private int N;
-	private int O;
-	private int P;
-	private int Q;
+public class Pauli extends Couche {
+	
 	public final static String SEPARATOR = ";";
+	private Pauli instance = this;
 	
 	public Pauli() {
-		K = 0;
-		L = 0;
-		M = 0;
-		N = 0;
-		O = 0;
-		P = 0;
-		Q = 0;
+		super();
 	}
+	
 	
 	public String couche(String nom) {
 		ReadCsv r = new ReadCsv();
@@ -33,7 +23,6 @@ public class Pauli  {
 			int a = 2*((int)Math.pow(n, 2));
 			int p = 0;
 			for(int j = 0; j < a; j++) {
-			//if(j <= a) {
 				if(h <= numatomique) {
 					p += 1;
 					h++;
@@ -65,8 +54,10 @@ public class Pauli  {
 			}
 			n++;
 		}
-		return "K = " + K + " L = " + L + " M = " + M + " N = " + N + " O = " + O + " P = " + P + " Q = "+ Q + ".";
+		return toString();
+		//"K = " + K + " L = " + L + " M = " + M + " N = " + N + " O = " + O + " P = " + P + " Q = "+ Q + ".";
 	}
+	
 	
 
 }
