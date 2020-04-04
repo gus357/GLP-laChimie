@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JTextArea;
 import javax.swing.OverlayLayout;
 
 import Chimie.Pauli;
@@ -15,8 +16,8 @@ public class ActionActinides extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		JLabel h = new JLabel();
-		
+		JTextArea h = new JTextArea();
+		h.setEditable(false);		
 		ReadCsv r = new ReadCsv() ;
 		r.ReadCSVAtome(";","tableauPeriodique.csv");
 		Pauli y = new Pauli();

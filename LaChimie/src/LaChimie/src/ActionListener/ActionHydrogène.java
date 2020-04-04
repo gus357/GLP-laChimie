@@ -23,7 +23,8 @@ public class ActionHydrogène extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		JLabel h = new JLabel();
+		JTextArea h = new JTextArea();
+		h.setEditable(false);
 		
 		ReadCsv r = new ReadCsv() ;
 		r.ReadCSVAtome(";","tableauPeriodique.csv");

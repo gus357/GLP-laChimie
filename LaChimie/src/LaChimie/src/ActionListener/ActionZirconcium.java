@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JTextArea;
 
 import Chimie.Pauli;
 import Data.ReadCsv;
@@ -13,7 +14,8 @@ public class ActionZirconcium extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		JLabel h = new JLabel();
+		JTextArea h = new JTextArea();
+		h.setEditable(false);
 		
 		ReadCsv r = new ReadCsv() ;
 		r.ReadCSVAtome(";","tableauPeriodique.csv");

@@ -49,6 +49,6 @@ public class Couche {
 
 		
 	public String toString() {
-		return "Couche [K=" + K + ", L=" + L + ", M=" + M + ", N=" + N + ", O=" + P + ", P=" + P+ ", Q=" + Q +"]";
+		return "\n Couche [K=" + K + ", L=" + L + ", M=" + M + ", N=" + N + ", O=" + P + ", P=" + P+ ", Q=" + Q +"]";
 	}
 }

@@ -17,105 +17,9 @@ import java.io.IOException;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
 
-import ActionListener.AcionFer;
-import ActionListener.ActionActinides;
-import ActionListener.ActionAluminium;
-import ActionListener.ActionAntimoine;
-import ActionListener.ActionArgent;
-import ActionListener.ActionArgon;
-import ActionListener.ActionArsenic;
-import ActionListener.ActionAstate;
-import ActionListener.ActionAzote;
-import ActionListener.ActionBaryum;
-import ActionListener.ActionBismuth;
-import ActionListener.ActionBohrium;
-import ActionListener.ActionBore;
-import ActionListener.ActionBrome;
-import ActionListener.ActionBérillium;
-import ActionListener.ActionCadmium;
-import ActionListener.ActionCalcium;
-import ActionListener.ActionCarbone;
-import ActionListener.ActionChlore;
-import ActionListener.ActionChrome;
-import ActionListener.ActionCobalt;
-import ActionListener.ActionCopernicium;
-import ActionListener.ActionCuivre;
-import ActionListener.ActionCésium;
-import ActionListener.ActionDarmstadium;
-import ActionListener.ActionDubnium;
-import ActionListener.ActionEtain;
-import ActionListener.ActionFlerovium;
-import ActionListener.ActionFluor;
-import ActionListener.ActionFrancium;
-import ActionListener.ActionGallium;
-import ActionListener.ActionGermanium;
-import ActionListener.ActionHafnium;
-import ActionListener.ActionHassium;
-import ActionListener.ActionHydrogène;
-import ActionListener.ActionHélium;
-import ActionListener.ActionIndium;
-import ActionListener.ActionIode;
-import ActionListener.ActionIridium;
-import ActionListener.ActionKrypton;
-import ActionListener.ActionLanthanides;
-import ActionListener.ActionLithium;
-import ActionListener.ActionLivermorium;
-import ActionListener.ActionMagnésium;
-import ActionListener.ActionManganèse;
-import ActionListener.ActionMeitnérium;
-import ActionListener.ActionMercure;
-import ActionListener.ActionMolibdène;
-import ActionListener.ActionMoscovium;
-import ActionListener.ActionNickel;
-import ActionListener.ActionNihonium;
-import ActionListener.ActionNobium;
-import ActionListener.ActionNéon;
-import ActionListener.ActionOganesson;
-import ActionListener.ActionOr;
-import ActionListener.ActionOsmium;
-import ActionListener.ActionOxygène;
-import ActionListener.ActionPalladium;
-import ActionListener.ActionPhosphore;
-import ActionListener.ActionPlatine;
-import ActionListener.ActionPlomb;
-import ActionListener.ActionPolonium;
-import ActionListener.ActionPotassium;
-import ActionListener.ActionRadium;
-import ActionListener.ActionRadon;
-import ActionListener.ActionRhodium;
-import ActionListener.ActionRoentgenium;
-import ActionListener.ActionRubidium;
-import ActionListener.ActionRutherfordium;
-import ActionListener.ActionRuthénium;
-import ActionListener.ActionRénium;
-import ActionListener.ActionScandium;
-import ActionListener.ActionSeaborgium;
-import ActionListener.ActionSilicium;
-import ActionListener.ActionSodium;
-import ActionListener.ActionSoufre;
-import ActionListener.ActionStrontium;
-import ActionListener.ActionSélénium;
-import ActionListener.ActionTantale;
-import ActionListener.ActionTechténium;
-import ActionListener.ActionTellure;
-import ActionListener.ActionTennesse;
-import ActionListener.ActionThalium;
-import ActionListener.ActionTitane;
-import ActionListener.ActionTungstène;
-import ActionListener.ActionVanadium;
-import ActionListener.ActionXénon;
-import ActionListener.ActionYttrium;
-import ActionListener.ActionZinc;
-import ActionListener.ActionZirconcium;
-import Data.ReadCsv;
-import Chimie.imgAtome.*;
-
+import ActionListener.*;
 import javax.imageio.ImageIO;
-import javax.print.DocFlavor.URL;
-import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
@@ -272,22 +176,14 @@ public class TableMende extends JFrame{
     cell15.add(but15);
     
     JPanel cell16 = new JPanel();
-    BufferedImage myPicture16 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/lanthanides.png"));
-	ImageIcon image16 = new ImageIcon(myPicture16);
+    JLabel image16 = new JLabel( new ImageIcon( "/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/lanthanides.png"));
     cell16.setPreferredSize(new Dimension(90, 65));
-    JButton but16 = new JButton (image16);
-    but16.setPreferredSize(new Dimension (90,60));
-    but16.addActionListener(new ActionLanthanides());
-    cell16.add(but16);
+    cell16.add(image16);
 			
     JPanel cell17 = new JPanel();
-    BufferedImage myPicture17 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Actinides.png"));
-	ImageIcon image17 = new ImageIcon(myPicture17);
+    JLabel image17 = new JLabel( new ImageIcon( "/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Actinides.png"));
     cell17.setPreferredSize(new Dimension(90, 65));
-    JButton but17 = new JButton (image17);
-    but17.setPreferredSize(new Dimension (90,60));
-    but17.addActionListener(new ActionActinides());
-    cell17.add(but17);
+    cell17.add(image17);
     
     //quatriÃ¨me colonne
     
@@ -450,7 +346,7 @@ public class TableMende extends JFrame{
     cell34.setPreferredSize(new Dimension(50, 65));
     JButton but34 = new JButton (image34);
     but34.setPreferredSize(new Dimension (50,60));
-    but34.addActionListener(new AcionFer());
+    but34.addActionListener(new ActionFer());
     cell34.add(but34);
     
     JPanel cell35 = new JPanel();
@@ -914,7 +810,7 @@ public class TableMende extends JFrame{
     cell84.setPreferredSize(new Dimension(50, 65));
     JButton but84 = new JButton (image84);
     but84.setPreferredSize(new Dimension (50,60));
-    but83.addActionListener(new ActionHélium());
+    but84.addActionListener(new ActionHélium());
     cell84.add(but84);
     
     JPanel cell85 = new JPanel();
@@ -978,6 +874,7 @@ public class TableMende extends JFrame{
     cell91.setPreferredSize(new Dimension(50,65));
     JButton but91 = new JButton (image91);
     but91.setPreferredSize(new Dimension(50,60));
+    but91.addActionListener(new ActionLanthane());
     cell91.add(but91);
    
     JPanel cell92 = new JPanel();
@@ -986,6 +883,7 @@ public class TableMende extends JFrame{
     cell92.setPreferredSize(new Dimension(50,65));
     JButton but92 = new JButton (image92);
     but92.setPreferredSize(new Dimension(50,60));
+    but92.addActionListener(new ActionCérium());   
     cell92.add(but92);
     
     JPanel cell93 = new JPanel();
@@ -994,6 +892,7 @@ public class TableMende extends JFrame{
     cell93.setPreferredSize(new Dimension(50,65));
     JButton but93 = new JButton (image93);
     but93.setPreferredSize(new Dimension(50,60));
+    but93.addActionListener(new ActionPreséodyme());
     cell93.add(but93);
     
     JPanel cell94 = new JPanel();
@@ -1002,6 +901,7 @@ public class TableMende extends JFrame{
     cell94.setPreferredSize(new Dimension(50,65));
     JButton but94 = new JButton (image94);
     but94.setPreferredSize(new Dimension(50,60));
+    but94.addActionListener(new ActionNéodyme());
     cell94.add(but94);
     
     JPanel cell95 = new JPanel();
@@ -1010,6 +910,7 @@ public class TableMende extends JFrame{
     cell95.setPreferredSize(new Dimension(50,65));
     JButton but95 = new JButton (image95);
     but95.setPreferredSize(new Dimension(50,60));
+    but95.addActionListener(new ActionProméthium());
     cell95.add(but95);
     
     JPanel cell96 = new JPanel();
@@ -1018,6 +919,7 @@ public class TableMende extends JFrame{
     cell96.setPreferredSize(new Dimension(50,65));
     JButton but96 = new JButton (image96);
     but96.setPreferredSize(new Dimension(50,60));
+    but96.addActionListener(new ActionSamarium());
     cell96.add(but96);
     
     JPanel cell97 = new JPanel();
@@ -1026,6 +928,7 @@ public class TableMende extends JFrame{
     cell97.setPreferredSize(new Dimension(50,65));
     JButton but97 = new JButton (image97);
     but97.setPreferredSize(new Dimension(50,60));
+    but97.addActionListener(new ActionEuropium());
     cell97.add(but97);
     
     JPanel cell98 = new JPanel();
@@ -1034,6 +937,7 @@ public class TableMende extends JFrame{
     cell98.setPreferredSize(new Dimension(50,65));
     JButton but98 = new JButton (image98);
     but98.setPreferredSize(new Dimension(50,60));
+    but98.addActionListener(new ActionGadolinium());
     cell98.add(but98);
     
     JPanel cell99 = new JPanel();
@@ -1042,6 +946,7 @@ public class TableMende extends JFrame{
     cell99.setPreferredSize(new Dimension(50,65));
     JButton but99 = new JButton (image99);
     but99.setPreferredSize(new Dimension(50,60));
+    but99.addActionListener(new ActionTerbium());
     cell99.add(but99);
     
     JPanel cell100 = new JPanel();
@@ -1050,6 +955,7 @@ public class TableMende extends JFrame{
     cell100.setPreferredSize(new Dimension(50,65));
     JButton but100 = new JButton (image100);
     but100.setPreferredSize(new Dimension(50,60));
+    but100.addActionListener(new ActionDysprosium());
     cell100.add(but100);
     
     JPanel cell101 = new JPanel();
@@ -1058,6 +964,7 @@ public class TableMende extends JFrame{
     cell101.setPreferredSize(new Dimension(50,65));
     JButton but101 = new JButton (image101);
     but101.setPreferredSize(new Dimension(50,60));
+    but101.addActionListener(new ActionHolmium());
     cell101.add(but101);
     
     JPanel cell102 = new JPanel();
@@ -1066,6 +973,7 @@ public class TableMende extends JFrame{
     cell102.setPreferredSize(new Dimension(50,65));
     JButton but102 = new JButton (image102);
     but102.setPreferredSize(new Dimension(50,60));
+    but102.addActionListener(new ActionErbium());
     cell102.add(but102);
     
     JPanel cell103 = new JPanel();
@@ -1074,6 +982,7 @@ public class TableMende extends JFrame{
     cell103.setPreferredSize(new Dimension(50,65));
     JButton but103 = new JButton (image103);
     but103.setPreferredSize(new Dimension(50,60));
+    but103.addActionListener(new ActionThulium());
     cell103.add(but103);
     
     JPanel cell104 = new JPanel();
@@ -1082,6 +991,7 @@ public class TableMende extends JFrame{
     cell104.setPreferredSize(new Dimension(50,65));
     JButton but104 = new JButton (image104);
     but104.setPreferredSize(new Dimension(50,60));
+    but104.addActionListener(new ActionYtterbium());
     cell104.add(but104);
     
     JPanel cell105 = new JPanel();
@@ -1090,15 +1000,17 @@ public class TableMende extends JFrame{
     cell105.setPreferredSize(new Dimension(50,65));
     JButton but105 = new JButton (image105);
     but105.setPreferredSize(new Dimension(50,60));
+    but105.addActionListener(new ActionLutécium());
     cell105.add(but105);
     
  // Dernière ligne
     JPanel cell106 = new JPanel();
     BufferedImage myPicture106 = ImageIO.read(new File("/Users/gulsu/git/GLP-laChimie/LaChimie/src/LaChimie/src/Chimie/imgAtome/Ac.png"));
-	ImageIcon image106 = new ImageIcon(myPicture10);
+	ImageIcon image106 = new ImageIcon(myPicture106);
     cell106.setPreferredSize(new Dimension(50,65));
     JButton but106 = new JButton (image106);
     but106.setPreferredSize(new Dimension(50,60));
+    but106.addActionListener(new ActionActinium());
     cell106.add(but106);
    
     JPanel cell107 = new JPanel();
@@ -1107,6 +1019,7 @@ public class TableMende extends JFrame{
     cell107.setPreferredSize(new Dimension(50,65));
     JButton but107 = new JButton (image107);
     but107.setPreferredSize(new Dimension(50,60));
+    but107.addActionListener(new ActionThorium());
     cell107.add(but107);
     
     JPanel cell108 = new JPanel();
@@ -1115,6 +1028,7 @@ public class TableMende extends JFrame{
     cell108.setPreferredSize(new Dimension(50,65));
     JButton but108 = new JButton (image108);
     but108.setPreferredSize(new Dimension(50,60));
+    but108.addActionListener(new ActionProtactinium());
     cell108.add(but108);
     
     JPanel cell109 = new JPanel();
@@ -1123,6 +1037,7 @@ public class TableMende extends JFrame{
     cell109.setPreferredSize(new Dimension(50,65));
     JButton but109 = new JButton (image109);
     but109.setPreferredSize(new Dimension(50,60));
+    but109.addActionListener(new ActionUranium());
     cell109.add(but109);
     
     JPanel cell110 = new JPanel();
@@ -1131,6 +1046,7 @@ public class TableMende extends JFrame{
     cell110.setPreferredSize(new Dimension(50,65));
     JButton but110 = new JButton (image110);
     but110.setPreferredSize(new Dimension(50,60));
+    but110.addActionListener(new ActionNeptunium());
     cell110.add(but110);
     
     JPanel cell111 = new JPanel();
@@ -1139,6 +1055,7 @@ public class TableMende extends JFrame{
     cell111.setPreferredSize(new Dimension(50,65));
     JButton but111 = new JButton (image111);
     but111.setPreferredSize(new Dimension(50,60));
+    but111.addActionListener(new ActionPlutonium());
     cell111.add(but111);
     
     JPanel cell112 = new JPanel();
@@ -1147,6 +1064,7 @@ public class TableMende extends JFrame{
     cell112.setPreferredSize(new Dimension(50,65));
     JButton but112 = new JButton (image112);
     but112.setPreferredSize(new Dimension(50,60));
+    but112.addActionListener(new ActionAméricium());
     cell112.add(but112);
     
     JPanel cell113 = new JPanel();
@@ -1155,6 +1073,7 @@ public class TableMende extends JFrame{
     cell113.setPreferredSize(new Dimension(50,65));
     JButton but113 = new JButton (image113);
     but113.setPreferredSize(new Dimension(50,60));
+    but113.addActionListener(new ActionCurium());
     cell113.add(but113);
     
     JPanel cell114 = new JPanel();
@@ -1163,6 +1082,7 @@ public class TableMende extends JFrame{
     cell114.setPreferredSize(new Dimension(50,65));
     JButton but114 = new JButton (image114);
     but114.setPreferredSize(new Dimension(50,60));
+    but114.addActionListener(new ActionBerkélium());
     cell114.add(but114);
     
     JPanel cell115 = new JPanel();
@@ -1171,6 +1091,7 @@ public class TableMende extends JFrame{
     cell115.setPreferredSize(new Dimension(50,65));
     JButton but115 = new JButton (image115);
     but115.setPreferredSize(new Dimension(50,60));
+    but115.addActionListener(new ActionCalifornium());
     cell115.add(but115);
     
     JPanel cell116 = new JPanel();
@@ -1179,6 +1100,7 @@ public class TableMende extends JFrame{
     cell116.setPreferredSize(new Dimension(50,65));
     JButton but116 = new JButton (image116);
     but116.setPreferredSize(new Dimension(50,60));
+    but116.addActionListener(new ActionEinsteinium());
     cell116.add(but116);
     
     JPanel cell117 = new JPanel();
@@ -1187,6 +1109,7 @@ public class TableMende extends JFrame{
     cell117.setPreferredSize(new Dimension(50,65));
     JButton but117 = new JButton (image117);
     but117.setPreferredSize(new Dimension(50,60));
+    but117.addActionListener(new ActionFermium());
     cell117.add(but117);
     
     JPanel cell118 = new JPanel();
@@ -1195,6 +1118,7 @@ public class TableMende extends JFrame{
     cell118.setPreferredSize(new Dimension(50,65));
     JButton but118 = new JButton (image118);
     but118.setPreferredSize(new Dimension(50,60));
+    but118.addActionListener(new ActionMendélévium());
     cell118.add(but118);
     
     JPanel cell119 = new JPanel();
@@ -1203,6 +1127,7 @@ public class TableMende extends JFrame{
     cell119.setPreferredSize(new Dimension(50,65));
     JButton but119 = new JButton (image119);
     but119.setPreferredSize(new Dimension(50,60));
+    but119.addActionListener(new ActionNobélium());
     cell119.add(but119);
     
     JPanel cell120 = new JPanel();
@@ -1211,6 +1136,7 @@ public class TableMende extends JFrame{
     cell120.setPreferredSize(new Dimension(50,65));
     JButton but120 = new JButton (image120);
     but120.setPreferredSize(new Dimension(50,60));
+    but120.addActionListener(new ActionLawrencium());
     cell120.add(but120);
     
     

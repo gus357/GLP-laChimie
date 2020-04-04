@@ -1,9 +1,9 @@
 package Tests;
 
-import Chimie.Definition;
+import ActionListener.ActionDefinition;
 
 public class TestDefiniton {
 	public static void main (String []args) {
-		new Definition();
+		new ActionDefinition();
 	}
 }

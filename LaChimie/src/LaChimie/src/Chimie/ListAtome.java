@@ -19,7 +19,7 @@ public class ListAtome {
 	 public  Atome recherchenom(String nom) { 
 	    	for(int i = 0; i < at.size(); i++) { 
 	    		if(at.get(i).getNom().equals(nom)) {
-	    			return at.get(i);
+	    			return at.get(i) ;
 	    		}
 	    	}
 	    	return null;

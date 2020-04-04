@@ -21,14 +21,8 @@ public class Definition extends JFrame{
 	private JTextField textField;
     private JTextArea textArea;
 
-	public Definition() {
-		this ("Définition");
-	}
-		
-	public Definition(String definition) {
-		super(definition);
-		this.getContentPane().setLayout(new GridBagLayout());
-		
+
+	public Definition(String definition) {		
 		/*
 		jfc = new JFileChooser();
 		jfc.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);		

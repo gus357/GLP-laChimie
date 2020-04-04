@@ -58,7 +58,7 @@ public class Atome {
 	}
 		
 	public String toString() {
-		return "Atome [nom=" + nom +", numero atomique=" + numAtomique + ", masse atomique=" + masseAtomique + ", symbole chimique=" + symChimique + ", famille=" + famille +"]";
+		return "Atome: nom=" + nom +", \n numero atomique=" + numAtomique + ",\n masse atomique=" + masseAtomique + ", \n symbole chimique=" + symChimique + ", \n famille=" + famille +" \n";
 	}
 	
 }

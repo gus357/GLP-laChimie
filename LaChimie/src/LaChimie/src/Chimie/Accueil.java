@@ -21,6 +21,9 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.OverlayLayout;
 
+import ActionListener.ActionDefinition;
+import ActionListener.ActionRep;
+
 public class Accueil extends JFrame{
 	private static JTextField jtfValeur; 
 	private static JPanel p;
@@ -51,6 +54,10 @@ public class Accueil extends JFrame{
 		def.addActionListener(new ActionDefinition());
 		def.setBackground(Color.GREEN);
 		l1.add(def);
+		
+		JButton rep = new JButton("Représentation");
+		rep.addActionListener(new ActionRep());
+		l1.add(rep);
 		
 		JButton Quitter = new JButton("Quitter");
 		Quitter.addActionListener(new ActionQuitter());
@@ -85,13 +92,6 @@ public class Accueil extends JFrame{
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
-		}
-	}
-	
-	private class ActionDefinition implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
-			Definition def = new Definition();
-			def.setVisible(true);
 		}
 	}
 	

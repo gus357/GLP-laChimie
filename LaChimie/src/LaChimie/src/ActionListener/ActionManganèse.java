@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JTextArea;
 
 import Chimie.Pauli;
 import Data.ReadCsv;
@@ -14,8 +15,8 @@ public class ActionManganèse extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		JLabel h = new JLabel();
-		
+		JTextArea h = new JTextArea();
+		h.setEditable(false);		
 		ReadCsv r = new ReadCsv() ;
 		r.ReadCSVAtome(";","tableauPeriodique.csv");
 		Pauli y = new Pauli();
