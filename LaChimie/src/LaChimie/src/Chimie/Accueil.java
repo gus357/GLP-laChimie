@@ -63,10 +63,12 @@ public class Accueil extends JFrame{
 		Quitter.addActionListener(new ActionQuitter());
 		Quitter.setBackground(Color.red);
 		l1.add(Quitter);
-				
+		
+		/***
         String  c[] ={"Rechercher","Table Mendelieve","Molécule","Animation"};  
         JComboBox   cb=new JComboBox(c);
         l1.add(cb);  
+        ***/
 	
 		GridBagConstraints c1 = new GridBagConstraints();
 		c1.fill = GridBagConstraints.HORIZONTAL;

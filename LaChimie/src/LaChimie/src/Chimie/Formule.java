@@ -1,6 +1,7 @@
 package Chimie;
 
 import java.awt.FlowLayout;
+import java.io.BufferedReader;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -37,8 +38,6 @@ public class Formule extends JFrame{
 		textField = new JTextField();
 		textField.setColumns(10);
 		
-		
-		
 		label = new JLabel("Saisir une formule brute:");
 		label1 = new JLabel();
 		
@@ -46,8 +45,8 @@ public class Formule extends JFrame{
 		panel.add(textField);
 		panel.add(label1);
 
-		JButton bouton = new JButton(new GetAction(this, "Formule Developper"));
-		
+		JButton bouton = new JButton(new GetAction(this, "ok!"));
+			
 		panel.add(bouton);
 		
 		return panel;
@@ -65,14 +64,10 @@ public class Formule extends JFrame{
 		return label1;
 	}
 	
+	
 	public static void main(String[] args) {
 		//On crée une nouvelle instance de notre FenetreTexte
 		Formule fenetre = new Formule();
 		fenetre.setVisible(true);//On la rend visible
 	}
 }
-
-
-
-
-
